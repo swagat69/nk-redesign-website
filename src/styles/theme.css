@@ -1,0 +1,303 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Clay-inspired system: warm manufacturing neutrals with saturated card accents. */
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Cream-tinted canvas, near-black ink, and saturated clay accents. */
+  --canvas: #fffaf0;
+  --background: #fffaf0; /* canvas */
+  --foreground: #0a0a0a; /* ink */
+  --card: #fffaf0;
+  --card-foreground: #0a0a0a;
+  --popover: #fffaf0;
+  --popover-foreground: #0a0a0a;
+  --primary: #0a0a0a;
+  --primary-foreground: #ffffff;
+  --secondary: #faf5e8; /* surface-soft */
+  --secondary-foreground: #0a0a0a;
+  --muted: #f5f0e0; /* surface-card */
+  --muted-foreground: #6a6a6a;
+  --accent: #f5f0e0;
+  --accent-foreground: #0a0a0a;
+
+  /* Primary brand mark and CTA color. */
+  --brand: #0a0a0a;
+  --brand-foreground: #ffffff;
+
+  /* Clay surfaces */
+  --surface-soft: #faf5e8;
+  --surface-card: #f5f0e0;
+  --surface-strong: #ebe6d6;
+  --surface-dark: #0a1a1a;
+  --surface-dark-elevated: #1a2a2a;
+  --ink: #0a0a0a;
+  --body: #3a3a3a;
+  --body-strong: #1a1a1a;
+  --muted-soft: #9a9a9a;
+  --hairline: #e5e5e5;
+  --hairline-soft: #f0f0f0;
+
+  /* Saturated feature card palette from DESIGN-clay.md. */
+  --clay-pink: #ff4d8b;
+  --clay-teal: #1a3a3a;
+  --clay-lavender: #b8a4ed;
+  --clay-peach: #ffb084;
+  --clay-ochre: #e8b94a;
+  --clay-mint: #a4d4c5;
+  --clay-coral: #ff6b5a;
+  --nk-red: #FB1622;
+  --nk-red-subtle: #FB1622;
+  --nk-red-muted: #FB1622;
+  --nk-red-surface: #fff0f1;
+  --nk-red-border: #f5b7bb;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: transparent;
+  --input-background: #fffaf0;
+  --switch-background: #d8d2c2;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --ring: #0a0a0a;
+  --chart-1: #FB1622;
+  --chart-2: #1a3a3a;
+  --chart-3: #b8a4ed;
+  --chart-4: #ffb084;
+  --chart-5: #e8b94a;
+  --radius: 0.75rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-canvas: var(--canvas);
+  --color-clay-pink: var(--clay-pink);
+  --color-clay-teal: var(--clay-teal);
+  --color-clay-lavender: var(--clay-lavender);
+  --color-clay-peach: var(--clay-peach);
+  --color-clay-ochre: var(--clay-ochre);
+  --color-clay-mint: var(--clay-mint);
+  --color-clay-coral: var(--clay-coral);
+  --color-nk-red: var(--nk-red);
+  --color-nk-red-subtle: var(--nk-red-subtle);
+  --color-nk-red-muted: var(--nk-red-muted);
+  --color-nk-red-surface: var(--nk-red-surface);
+  --color-nk-red-border: var(--nk-red-border);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-card: var(--surface-card);
+  --color-surface-strong: var(--surface-strong);
+  --color-surface-dark: var(--surface-dark);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-body-strong: var(--body-strong);
+  --color-muted-soft: var(--muted-soft);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  /* UX: visible keyboard focus on every interactive element */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Hide scrollbars by default; reveal on scroll where supported */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(26, 23, 20, 0.25) transparent;
+  }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: transparent; border-radius: 9999px; }
+  *:hover::-webkit-scrollbar-thumb { background: rgba(26, 23, 20, 0.22); }
+  ::selection { background: var(--nk-red); color: #ffffff; }
+}
+
+@layer base {
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+/* Lenis smooth-scroll recommended styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
