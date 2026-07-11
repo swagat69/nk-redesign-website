@@ -4,7 +4,8 @@
 const base = "https://images.unsplash.com/photo-";
 
 export function img(id: string, w = 1200, h = 800): string {
-  if (id.startsWith("/") || id.startsWith("http")) return id;
+  if (id.startsWith("/")) return import.meta.env.BASE_URL.replace(/\/$/, "") + id;
+  if (id.startsWith("http")) return id;
   return `${base}${id}?w=${w}&h=${h}&fit=crop&auto=format&q=80`;
 }
 

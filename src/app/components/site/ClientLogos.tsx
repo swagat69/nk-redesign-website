@@ -1,3 +1,5 @@
+import { img } from "../../lib/images";
+
 const CLIENT_LOGOS = [
   {
     name: "Featured NK client",
@@ -25,7 +27,7 @@ export function ClientLogoCards() {
           <li key={logo.name}>
             <div className="flex h-20 items-center justify-center px-2 py-2 sm:h-24">
               <img
-                src={logo.src}
+                src={img(logo.src)}
                 alt={`${logo.name} logo`}
                 className="max-h-16 max-w-[88%] object-contain sm:max-h-20"
                 loading="lazy"

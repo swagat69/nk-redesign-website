@@ -20,6 +20,8 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  // Set VITE_BASE for subpath deploys (e.g. GitHub Pages: /nk-redesign-website/)
+  base: process.env.VITE_BASE || '/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
