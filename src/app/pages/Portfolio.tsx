@@ -442,7 +442,7 @@ export default function Portfolio() {
         <Container>
           <SectionHeading
             title="Programs buyers already recognize."
-            intro="Real examples from NK's uniform and merchandise work — delivered as repeat programs, not one off samples."
+            intro="Real examples from NK's uniform and merchandise work, delivered as repeat programs, not one off samples."
             titleClassName="text-[var(--nk-red)]"
             introClassName="max-w-none xl:whitespace-nowrap"
           />
