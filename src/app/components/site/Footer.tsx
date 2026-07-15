@@ -45,9 +45,20 @@ function Horizon() {
           ellipse. Percentages mirror the old cx/cy (1180/1440, 70/220) so it
           tracks the hills as they stretch. */}
       <span
-        className="absolute size-10 rounded-full bg-[var(--nk-red)] md:size-[54px]"
+        className="absolute flex size-10 items-center justify-center rounded-full bg-[var(--nk-red)] md:size-[54px]"
         style={{ left: "81.944%", top: "31.818%", transform: "translate(-50%, -50%)" }}
-      />
+      >
+        {/* NK has no descenders, so centring the line box leaves the caps
+            sitting 0.106em low (Inter: cap height 0.73em, baseline 0.971em
+            from box top). Nudge up to optically centre the glyphs; em keeps
+            it correct at both type sizes. */}
+        <span
+          className="text-[15px] leading-none text-white md:text-[20px]"
+          style={{ fontWeight: 600, letterSpacing: "0.01em", transform: "translateY(-0.106em)" }}
+        >
+          NK
+        </span>
+      </span>
     </div>
   );
 }
