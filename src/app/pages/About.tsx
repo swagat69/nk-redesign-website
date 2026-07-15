@@ -29,24 +29,24 @@ import { STATS, TESTIMONIALS, DIFFERENTIATORS } from "../lib/content";
 
 const VALUES = [
   { title: "Quality", body: "NK checks work from fabric through final shipment rather than relying on small final random checks." },
-  { title: "Transparency", body: "Freight, customs, and local transportation support are coordinated without extra NK mark-up." },
+  { title: "Transparency", body: "Freight, customs, and local transportation support are coordinated without extra NK markup." },
   { title: "Ethical manufacturing", body: "Factory partners are selected for quality, sustainable practices, and responsible production." },
-  { title: "Client partnership", body: "The Trail Life relationship shows the kind of long-term trust NK wants to build." },
+  { title: "Client partnership", body: "The Trail Life relationship shows the kind of long term trust NK wants to build." },
 ];
 
 const JOURNEY = [
   { marker: "Karachi", title: "Small warehouse roots", body: "NK's story begins in Karachi and grows into a custom clothing supplier for international buyers." },
-  { marker: "2000", title: "Long-running buyer support", body: "Since 2000, NK has helped U.S. and European businesses with overseas and local production matters." },
+  { marker: "2000", title: "Long running buyer support", body: "Since 2000, NK has helped U.S. and European businesses with overseas and local production matters." },
   { marker: "U.S. base", title: "Stateside service", body: "A U.S. presence keeps buyers close to quotes, approvals, progress updates, timelines, and logistics." },
   { marker: "Overseas", title: "Production and QC office", body: "An overseas office, crew, and QC inspectors connect buyer communication with factory execution." },
   { marker: "Now", title: "Design to delivery", body: "Sampling, production, packaging, freight, customs, local transport, and QC move in one accountable flow." },
 ];
 
 const COMPARISON = [
-  { label: "Family-owned accountability", nk: true, them: false },
-  { label: "Zero mark-up freight, customs, and local transport", nk: true, them: false },
+  { label: "Family owned accountability", nk: true, them: false },
+  { label: "Zero markup freight, customs, and local transport", nk: true, them: false },
   { label: "100% final quality control", nk: true, them: false },
-  { label: "U.S.-based service team", nk: true, them: false },
+  { label: "U.S. based service team", nk: true, them: false },
   { label: "Sustainable material options", nk: true, them: false },
   { label: "Hidden brokerage and handling fees", nk: false, them: true },
 ];
@@ -74,7 +74,7 @@ export default function About() {
       <PageHero
         eyebrow="About & Clients"
         title={<>Built on family ownership and buyer confidence.</>}
-        intro="NK is a family-owned, U.S.-based custom clothing supplier with overseas production, crew, and QC support for buyers in the United States, Europe, and beyond."
+        intro="NK is a family owned, U.S. based custom clothing supplier with overseas production, crew, and QC support for buyers in the United States, Europe, and beyond."
         photo={img(PHOTO.factoryGroup, 1000, 760)}
         titleClassName="text-[var(--nk-red-subtle)]"
       />
@@ -98,15 +98,15 @@ export default function About() {
                   and local production matters since 2000.
                 </p>
                 <p>
-                  Today, NK pairs U.S.-based service with an overseas office, crew,
+                  Today, NK pairs U.S. based service with an overseas office, crew,
                   and QC inspectors. That structure lets buyers stay close to
                   communication, samples, purchase orders, production updates,
                   quality checks, freight, customs, and delivery.
                 </p>
                 <p>
                   The redesigned site keeps that story close to the proof: zero
-                  mark-up logistics support, 100% inspection, sustainable materials,
-                  ethical factories, and long-term client relationships such as Trail Life.
+                  markup logistics support, 100% inspection, sustainable materials,
+                  ethical factories, and long term client relationships such as Trail Life.
                 </p>
               </div>
             </Reveal>
@@ -212,7 +212,7 @@ export default function About() {
           />
           <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2">
             {[
-              { place: "New Jersey, USA", role: "Client Service & Sales", body: "Your day-to-day contact for quotes, approvals, timelines, and logistics in your timezone.", photo: PHOTO.storeInterior, color: "lavender" as const },
+              { place: "New Jersey, USA", role: "Client Service & Sales", body: "Your day to day contact for quotes, approvals, timelines, and logistics in your timezone.", photo: PHOTO.storeInterior, color: "lavender" as const },
               { place: "Karachi, Pakistan", role: "Production & Quality", body: "Pattern makers, line supervisors, and QC inspectors who turn approved samples into bulk reality.", photo: PHOTO.sewingWorkshop, color: "peach" as const },
             ].map((t) => (
               <div key={t.place} className={`overflow-hidden rounded-[24px] p-3 ${t.color === "lavender" ? "bg-[var(--clay-lavender)]" : "bg-[var(--clay-peach)]"}`}>

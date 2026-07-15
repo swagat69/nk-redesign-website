@@ -47,7 +47,7 @@ const CAP_PREVIEW = [
     color: "pink" as const,
     icon: PenTool,
     title: "Design & Prototyping",
-    body: "Detailed communication, quote planning, fabric selection, proto samples, and first-run approvals.",
+    body: "Detailed communication, quote planning, fabric selection, proto samples, and first run approvals.",
     photo: PHOTO.cuttingFabric,
   },
   {
@@ -61,7 +61,7 @@ const CAP_PREVIEW = [
     color: "lavender" as const,
     icon: Truck,
     title: "Logistics & Quality",
-    body: "Ocean or air freight, U.S. customs, local transport, zero mark-up support, and 100% QC.",
+    body: "Ocean or air freight, U.S. customs, local transport, zero markup support, and 100% QC.",
     photo: PHOTO.fabricWarehouse,
   },
 ];
@@ -84,11 +84,11 @@ const HOME_PRODUCT_STORIES = [
 const HOME_PRODUCT_COPY: Record<string, { label: string; headline: string; headlineLines?: [string, string] }> = {
   "pants-jeans": {
     label: "Denim range",
-    headline: "Wash-controlled denim with buyer-ready fit families.",
-    headlineLines: ["Wash-controlled denim with", "buyer-ready fit families."],
+    headline: "Wash controlled denim with buyer ready fit families.",
+    headlineLines: ["Wash controlled denim with", "buyer ready fit families."],
   },
   "chino-pants": {
-    label: "Non-denim range",
+    label: "Non denim range",
     headline: "Chinos, cargos, shorts, and wovens with visible fabric specs.",
     headlineLines: ["Chinos, cargos, shorts, and wovens", "with visible fabric specs."],
   },
@@ -237,7 +237,7 @@ export default function Home() {
 
                     <p data-hero-copy className="mt-5 max-w-[52ch] text-[1rem] leading-[1.6] text-white/80 md:text-[1.1rem]">
                       NK specializes in uniforms of all types, streetwear and trendy
-                      fashion, merchant-based apparel, men, women, and children lines,
+                      fashion, merchant based apparel, men, women, and children lines,
                       and 100% customized private labels.
                     </p>
 
@@ -327,7 +327,7 @@ export default function Home() {
                   className="max-w-[11ch] text-[clamp(2.2rem,4.6vw,4rem)] leading-[0.98] tracking-[-0.06em] text-[var(--nk-red-subtle)]"
                   style={{ fontWeight: 500 }}
                 >
-                  Denim & Non-Denim.
+                  Denim & Non Denim.
                 </h2>
               </div>
               <div className="lg:justify-self-end">
@@ -441,7 +441,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Why NK"
             title="Reasons buyers stay for years."
-            intro="Real strengths from the live site: family ownership, overseas office support, zero mark-up logistics, 100% QC, and long-term client relationships."
+            intro="Real strengths from the live site: family ownership, overseas office support, zero markup logistics, 100% QC, and long term client relationships."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none 2xl:whitespace-nowrap"
           />
@@ -463,7 +463,7 @@ export default function Home() {
         <Container>
           <SectionHeading
             eyebrow="Client proof"
-            title="Live-site proof, not filler testimonials."
+            title="Live site proof, not filler testimonials."
             intro="The redesigned proof cards use client names and product examples surfaced on NK's current website."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none xl:whitespace-nowrap"

@@ -41,8 +41,8 @@ const PRODUCT_LAUNCH: Array<{
   {
     group: "denim",
     title: "Denim",
-    headline: "Wash-controlled fit families for retail-ready bottoms.",
-    body: "A focused denim story for straight, easy, and authentic-fit pants with fabric, wash, and hardware notes visible.",
+    headline: "Wash controlled fit families for retail ready bottoms.",
+    body: "A focused denim story for straight, easy, and authentic fit pants with fabric, wash, and hardware notes visible.",
     imageProductId: "pants-jeans",
     featureIds: ["pants-jeans", "denim-jackets", "denim-cargo"],
     facts: ["99% cotton / 1% elastane", "Straight, easy, and authentic fits", "Wash standards and hardware choices"],
@@ -51,9 +51,9 @@ const PRODUCT_LAUNCH: Array<{
   },
   {
     group: "non-denim",
-    title: "Non-Denim",
+    title: "Non Denim",
     headline: "Chinos, cargos, shorts, and woven ranges with specs up front.",
-    body: "A quick-scan woven range covering chinos, cargos, shorts, stretch twill, canvas, hemp, and herringbone.",
+    body: "A quick scan woven range covering chinos, cargos, shorts, stretch twill, canvas, hemp, and herringbone.",
     imageProductId: "chino-pants",
     featureIds: ["chino-pants", "shorts", "overalls"],
     facts: ["Cotton, hemp, ripstop, canvas, and stretch twill", "Formal, jogger, cargo, straight, and short styles", "GSM, colorway, and construction notes"],
@@ -72,8 +72,8 @@ const FABRIC_HIGHLIGHTS = [
   {
     color: "peach" as const,
     icon: Layers,
-    title: "High-quality fabrics",
-    body: "High-grade polyester, sustainably grown crops, specialty knits, and custom fabrics sourced to spec.",
+    title: "High quality fabrics",
+    body: "High grade polyester, sustainably grown crops, specialty knits, and custom fabrics sourced to spec.",
   },
   {
     color: "ochre" as const,
@@ -88,13 +88,13 @@ const CASE_STUDIES = [
     photo: "/old-site/factory-qc-tees.jpg",
     client: "Trail Life customized uniforms",
     challenge: "Uniform pieces for a national youth organization, produced season after season with consistent sizing and branding.",
-    proof: "A long-running program covering badges, decoration, and replenishment runs from one supplier.",
+    proof: "A long running program covering badges, decoration, and replenishment runs from one supplier.",
   },
   {
     photo: PHOTO.crewShirt,
     client: "Taco Bell tees",
     challenge: "Branded tees produced to buyer artwork, with approved fits and repeatable sizing across reorders.",
-    proof: "Retail-recognizable merchandise work with print clarity and hand feel held consistent run after run.",
+    proof: "Retail recognizable merchandise work with print clarity and hand feel held consistent run after run.",
   },
   {
     photo: "/old-site/tl-belt.jpg",
@@ -316,7 +316,7 @@ export default function Portfolio() {
       <PageHero
         eyebrow="Products"
         title={<>Products built from real buyer references.</>}
-        intro="Browse denim, non-denim, uniforms, tees, accessories, and private-label collections with key material and finish notes kept visible."
+        intro="Browse denim, non denim, uniforms, tees, accessories, and private label collections with key material and finish notes kept visible."
         photo={img(PHOTO.boutiqueRacks, 1000, 760)}
         titleClassName="text-[var(--nk-red-subtle)]"
         actions={
@@ -335,8 +335,8 @@ export default function Portfolio() {
         <Container>
           <div className="mb-8">
             <SectionHeading
-              title="Denim & Non-Denim."
-              intro="A premium product focus area for the new bottoms range, with materials, finishes, and buyer-ready product sheets visible up front."
+              title="Denim & Non Denim."
+              intro="A premium product focus area for the new bottoms range, with materials, finishes, and buyer ready product sheets visible up front."
               titleClassName="text-[var(--nk-red-subtle)]"
               introClassName="max-w-none 2xl:whitespace-nowrap"
             />
@@ -426,7 +426,7 @@ export default function Portfolio() {
         <Container>
           <SectionHeading
             title="The details buyers feel first."
-            intro="NK positions quality as a design-to-door-delivery discipline: careful materials, ethical factories, secure packaging, and reliable shipping."
+            intro="NK positions quality as a design to door delivery discipline: careful materials, ethical factories, secure packaging, and reliable shipping."
             titleClassName="text-[var(--nk-red)]"
             introClassName="max-w-none 2xl:whitespace-nowrap"
           />
@@ -442,7 +442,7 @@ export default function Portfolio() {
         <Container>
           <SectionHeading
             title="Programs buyers already recognize."
-            intro="Real examples from NK's uniform and merchandise work — delivered as repeat programs, not one-off samples."
+            intro="Real examples from NK's uniform and merchandise work — delivered as repeat programs, not one off samples."
             titleClassName="text-[var(--nk-red)]"
             introClassName="max-w-none xl:whitespace-nowrap"
           />

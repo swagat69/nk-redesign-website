@@ -45,7 +45,7 @@ export default function Capabilities() {
       <PageHero
         eyebrow="Services & Process"
         title={<>The full production journey, made scannable.</>}
-        intro="The live NK site describes a practical flow: communication, quote, proto sample, purchase order, first-run approval, production updates, 100% QC, packaging, customs, and delivery."
+        intro="The live NK site describes a practical flow: communication, quote, proto sample, purchase order, first run approval, production updates, 100% QC, packaging, customs, and delivery."
         photo={img(CAPABILITIES[1].photo, 1000, 760)}
         titleClassName="text-[var(--nk-red-subtle)]"
         actions={
@@ -65,7 +65,7 @@ export default function Capabilities() {
           <SectionHeading
             eyebrow="Overview"
             title="Every stage, clearly owned."
-            intro="NK brings product development, production, QC, logistics, customs support, packaging, and sustainability into one accountable flow with fewer hand-offs and clearer responsibility."
+            intro="NK brings product development, production, QC, logistics, customs support, packaging, and sustainability into one accountable flow with fewer handoffs and clearer responsibility."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none 2xl:whitespace-nowrap"
           />
@@ -101,7 +101,7 @@ export default function Capabilities() {
           <RevealGroup className="grid gap-4 md:grid-cols-3">
             {[
               {
-                title: "Logistics without extra mark-up",
+                title: "Logistics without extra markup",
                 body: "NK coordinates ocean or air freight, customs, and local transportation while passing through the actual logistics cost.",
               },
               {
@@ -110,7 +110,7 @@ export default function Capabilities() {
               },
               {
                 title: "Buyer approval before scale",
-                body: "Proto samples and first-run production samples keep the customer involved before full production moves ahead.",
+                body: "Proto samples and first run production samples keep the customer involved before full production moves ahead.",
               },
             ].map((item) => (
               <div key={item.title} className="rounded-[20px] bg-[var(--surface-card)] p-7">
@@ -176,7 +176,7 @@ export default function Capabilities() {
           <SectionHeading
             eyebrow="Process Timeline"
             title="From consultation to delivery."
-            intro="Every project moves through the live-site workflow: communication, quote, proto sample, PO, progress updates, first-run approval, QC, and delivery."
+            intro="Every project moves through the live site workflow: communication, quote, proto sample, PO, progress updates, first run approval, QC, and delivery."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none 2xl:whitespace-nowrap"
           />

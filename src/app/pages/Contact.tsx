@@ -57,7 +57,7 @@ const FAQS = [
   },
   {
     q: "How does sampling work?",
-    a: "We develop or review the tech pack, produce a physical prototype, refine fit, and approve a gold-seal sample before bulk production.",
+    a: "We develop or review the tech pack, produce a physical prototype, refine fit, and approve a gold seal sample before bulk production.",
   },
   {
     q: "What are typical lead times?",

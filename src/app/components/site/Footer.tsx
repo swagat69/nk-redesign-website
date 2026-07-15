@@ -52,7 +52,7 @@ export function Footer() {
           <div>
             <BrandLogo />
             <p className="mt-5 max-w-[34ch] text-[15px] leading-[1.6] text-body">
-              A family-owned custom apparel manufacturing partner turning ideas
+              A family owned custom apparel manufacturing partner turning ideas
               into finished garments with transparent pricing, QC, and care.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 text-[13px] font-medium text-muted-foreground">
