@@ -30,17 +30,25 @@ const COLUMNS = [
 
 function Horizon() {
   return (
-    <svg
-      viewBox="0 0 1440 220"
-      preserveAspectRatio="none"
-      className="block h-32 w-full md:h-44"
-      aria-hidden
-    >
-      <path d="M0 220 V120 Q240 60 480 110 T960 105 T1440 95 V220 Z" fill="var(--clay-ochre)" />
-      <path d="M0 220 V150 Q300 100 620 140 T1140 140 T1440 130 V220 Z" fill="var(--clay-peach)" />
-      <path d="M0 220 V180 Q360 150 760 175 T1440 170 V220 Z" fill="var(--clay-teal)" />
-      <circle cx="1180" cy="70" r="34" fill="var(--nk-red)" />
-    </svg>
+    <div className="relative h-32 w-full md:h-44" aria-hidden>
+      <svg
+        viewBox="0 0 1440 220"
+        preserveAspectRatio="none"
+        className="block h-full w-full"
+      >
+        <path d="M0 220 V120 Q240 60 480 110 T960 105 T1440 95 V220 Z" fill="var(--clay-ochre)" />
+        <path d="M0 220 V150 Q300 100 620 140 T1140 140 T1440 130 V220 Z" fill="var(--clay-peach)" />
+        <path d="M0 220 V180 Q360 150 760 175 T1440 170 V220 Z" fill="var(--clay-teal)" />
+      </svg>
+      {/* The sun sits outside the SVG: preserveAspectRatio="none" stretches the
+          hills to any width by design, which would squash a <circle> into an
+          ellipse. Percentages mirror the old cx/cy (1180/1440, 70/220) so it
+          tracks the hills as they stretch. */}
+      <span
+        className="absolute size-10 rounded-full bg-[var(--nk-red)] md:size-[54px]"
+        style={{ left: "81.944%", top: "31.818%", transform: "translate(-50%, -50%)" }}
+      />
+    </div>
   );
 }
 
