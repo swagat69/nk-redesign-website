@@ -45,7 +45,7 @@ export default function Capabilities() {
       <PageHero
         eyebrow="Services & Process"
         title={<>The full production journey, made scannable.</>}
-        intro="The live NK site describes a practical flow: communication, quote, proto sample, purchase order, first run approval, production updates, 100% QC, packaging, customs, and delivery."
+        intro="The live NK site describes a practical flow: communication, quote, proto sample, purchase order, first run approval, production updates, Maximum Quality Control, packaging, customs, and delivery."
         photo={img(CAPABILITIES[1].photo, 1000, 760)}
         titleClassName="text-[var(--nk-red-subtle)]"
         actions={

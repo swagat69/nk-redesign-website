@@ -10,7 +10,7 @@ export function BrandLogo({
 }) {
   return (
     <span className={cn("inline-flex items-center gap-3", className)}>
-      <span className="flex h-11 w-16 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5">
+      <span className="flex h-11 w-16 items-center justify-center">
         <img
           src={logoUrl}
           alt="NK logo"

@@ -7,7 +7,7 @@ export const STATS = [
   },
   {
     label: "100+ customers",
-    body: "Collections built for U.S. buyers, youth organizations, retailers, and hospitality teams.",
+    body: "Apparel collections created for brands, retailers, organizations, and communities across a wide range of styles and occasions.",
   },
   {
     label: "100% success rate",
@@ -23,7 +23,7 @@ export const PROCESS = [
   {
     id: "consultation",
     title: "Communication",
-    body: "Customer and NK staff align on the product, specs, quantity, target price, and preferred shipment mode.",
+    body: "Customers and NK staff stay fully aligned on product requirements, specifications, quantities, target pricing, and preferred shipping methods, with 24/7 support throughout the process.",
   },
   {
     id: "sampling",
@@ -31,14 +31,14 @@ export const PROCESS = [
     body: "Pricing is built around quantity and shipping method, then proto samples are produced from the approved details.",
   },
   {
-    id: "production",
-    title: "Purchase order & production",
-    body: "After approval and PO, production begins with daily and weekly progress updates for the buyer.",
-  },
-  {
     id: "inspection",
     title: "First run approval & QC",
     body: "First run production samples are sent for approval, then NK checks the work from fabric through final shipment.",
+  },
+  {
+    id: "production",
+    title: "Purchase order & production",
+    body: "Following approval and receipt of the purchase order, production begins with daily communication and progress updates through final delivery.",
   },
   {
     id: "delivery",
@@ -81,7 +81,7 @@ export const CAPABILITIES = [
     eyebrow: "Logistics",
     title: "Logistics & Quality Assurance",
     summary:
-      "Ocean and air freight, customs support, local transport, zero markup logistics, daily inspections, and 100% QC.",
+      "Ocean and air freight, customs support, local transport, zero markup logistics, daily inspections, and Maximum Quality Control.",
     points: [
       "Competitive ocean and air freight arranged through close provider relationships",
       "U.S. customs and local transportation coordinated door to door",
@@ -401,14 +401,14 @@ export const FEATURED_PRODUCTS = PRODUCTS.filter((product) => product.featured);
 export const DIFFERENTIATORS = [
   {
     title: "Family owned since 2000",
-    body: "A U.S. based, family owned solution for American and European buyers with overseas office, crew, and QC support.",
+    body: "A U.S. based, family owned partner serving American and European customers with 24/7 support from dedicated local and overseas teams.",
   },
   {
     title: "Zero markup logistics",
     body: "Ocean or air freight, U.S. customs, and local transportation are coordinated without extra NK markup.",
   },
   {
-    title: "100% quality control",
+    title: "Maximum Quality Control",
     body: "NK checks production from fabric through final shipment, rejecting work that does not meet the agreed standard.",
   },
   {
@@ -417,11 +417,11 @@ export const DIFFERENTIATORS = [
   },
   {
     title: "End to end partnership",
-    body: "Communication, quote, proto sample, PO, first run approval, production updates, QC, and delivery stay connected.",
+    body: "NK takes responsibility throughout the process and works closely with customers to resolve any product concerns and achieve a satisfactory outcome.",
   },
   {
-    title: "Global offices, transparent pricing",
-    body: "Customers stay close to overseas production through U.S. support, progress updates, and clear logistics costs.",
+    title: "Global offices",
+    body: "Customers receive U.S. and overseas support, regular progress updates, and dedicated team members available to assist as needed.",
   },
 ];
 

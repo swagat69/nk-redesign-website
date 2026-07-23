@@ -82,7 +82,7 @@ export function Footer() {
               <span aria-hidden>/</span>
               <span className="inline-flex items-center gap-1.5">
                 <Award className="size-4 text-[var(--nk-red)]" />
-                100% QC
+                Maximum Quality Control
               </span>
             </div>
           </div>

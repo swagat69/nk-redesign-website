@@ -54,14 +54,14 @@ const CAP_PREVIEW = [
     color: "teal" as const,
     icon: Factory,
     title: "Manufacturing & Customization",
-    body: "Uniforms, tees, polos, shirts, pants, belts, socks, aprons, overalls, and private labels.",
+    body: "Uniforms and fashion apparel, including tees, polos, woven shirts, bottoms, belts, socks, aprons, overalls, and private label collections.",
     photo: PHOTO.sewingWorkshop,
   },
   {
     color: "lavender" as const,
     icon: Truck,
-    title: "Logistics & Quality",
-    body: "Ocean or air freight, U.S. customs, local transport, zero markup support, and 100% QC.",
+    title: "Logistics",
+    body: "Door Deliveries are available which includes all custom needs and local transportation without any charges.",
     photo: PHOTO.fabricWarehouse,
   },
 ];
@@ -89,8 +89,7 @@ const HOME_PRODUCT_COPY: Record<string, { label: string; headline: string; headl
   },
   "chino-pants": {
     label: "Non denim range",
-    headline: "Chinos, cargos, shorts, and wovens with visible fabric specs.",
-    headlineLines: ["Chinos, cargos, shorts, and wovens", "with visible fabric specs."],
+    headline: "Chinos, cargos, shorts, and wovens.",
   },
 };
 
@@ -362,7 +361,7 @@ export default function Home() {
               </h2>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              {["Qualifying yarn", "Best designs", "Premium finished garments", "Safe packaging", "Reliable shipping"].map((item) => (
+              {["Qualifying yarn", "Custom Designs", "Premium finished garments", "Custom Packaging", "Reliable shipping"].map((item) => (
                 <div
                   key={item}
                   className="rounded-2xl bg-background px-5 py-4 text-[15px] font-semibold text-ink transition-colors duration-300 hover:text-[var(--nk-red)]"
@@ -377,7 +376,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Capabilities"
               title="Every service under accountable ownership."
-              intro="From design to door delivery, NK keeps sampling, production, QC, packaging, customs, and shipping connected."
+              intro="From design to door delivery, NK keeps sampling, production, quality control, packaging, customs, and all logistics seamlessly connected."
               titleClassName="text-[var(--nk-red)]"
               introClassName="max-w-none lg:whitespace-nowrap"
             />
@@ -407,7 +406,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="How it works"
             title="A clear path from brief to delivery."
-            intro="A transparent production flow from first conversation to delivered goods, with every stage easy to track."
+            intro="Door to door delivery is available, including customs clearance and local transportation at no additional charge."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none xl:whitespace-nowrap"
           />
@@ -440,8 +439,8 @@ export default function Home() {
         <Container>
           <SectionHeading
             eyebrow="Why NK"
-            title="Reasons buyers stay for years."
-            intro="Real strengths from the live site: family ownership, overseas office support, zero markup logistics, 100% QC, and long term client relationships."
+            title="NK Partnerships Built to Last"
+            intro="We have maintained customer relationships spanning over two decades, a reflection of the care, confidence, and trust behind every partnership."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none 2xl:whitespace-nowrap"
           />

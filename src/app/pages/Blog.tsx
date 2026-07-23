@@ -53,7 +53,7 @@ const POSTS = [
     photo: PHOTO.embroidery,
   },
   {
-    title: "Daily inspection, final shipment checks, and 100% QC",
+    title: "Daily inspection, final shipment checks, and Maximum Quality Control",
     category: "Quality",
     read: "4 min read",
     body: "A plain language breakdown of quality control from fabric through final shipment, without relying only on small random checks.",
