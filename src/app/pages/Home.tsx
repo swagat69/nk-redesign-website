@@ -16,7 +16,6 @@ import {
   ClipboardList,
   Package,
   Quote,
-  Sparkles,
 } from "lucide-react";
 import { Link } from "react-router";
 import {
@@ -136,9 +135,8 @@ function HomeProductStory({ product }: { product: ProductItem }) {
             <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/42">Made from</dt>
             <dd className="text-[12px] leading-[1.42] text-white/76">
               <span className="line-clamp-2 block">{product.madeFrom}</span>
-              <span className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-[var(--nk-red)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-white">
-                <Sparkles className="size-3" strokeWidth={2.5} />
-                Fully customizable
+              <span className="mt-2.5 inline-block rounded-full bg-[var(--nk-red)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-white">
+                Customizable
               </span>
             </dd>
           </div>
