@@ -139,11 +139,8 @@ function ProductSpecSummary({ product }: { product: ProductItem }) {
         </dt>
         <dd className="text-[11px] leading-[1.45] text-body">
           <span className="line-clamp-2 block">{product.madeFrom}</span>
-          <span className="mt-1.5 flex items-center gap-1.5 text-muted-foreground">
-            or engineered to your spec
-            <span className="rounded-full bg-[var(--surface-card)] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-body">
-              Customizable
-            </span>
+          <span className="mt-2 inline-block rounded-full bg-[var(--surface-card)] px-2.5 py-[3px] text-[9px] font-semibold uppercase tracking-[0.08em] text-body">
+            Customizable
           </span>
         </dd>
       </div>

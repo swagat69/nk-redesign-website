@@ -135,11 +135,8 @@ function HomeProductStory({ product }: { product: ProductItem }) {
             <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/42">Made from</dt>
             <dd className="text-[12px] leading-[1.42] text-white/76">
               <span className="line-clamp-2 block">{product.madeFrom}</span>
-              <span className="mt-1.5 flex items-center gap-1.5 text-white/55">
-                or engineered to your spec
-                <span className="rounded-full bg-white/12 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-white/75">
-                  Customizable
-                </span>
+              <span className="mt-2 inline-block rounded-full bg-white/12 px-2.5 py-[3px] text-[9px] font-semibold uppercase tracking-[0.08em] text-white/75">
+                Customizable
               </span>
             </dd>
           </div>
