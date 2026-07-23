@@ -10,8 +10,8 @@ export const STATS = [
     body: "Apparel collections created for brands, retailers, organizations, and communities across a wide range of styles and occasions.",
   },
   {
-    label: "100% success rate",
-    body: "Daily production checks and 100% inspection before shipped goods leave the floor.",
+    label: "Maximum quality control",
+    body: "Daily production checks and full inspection before shipped goods leave the floor.",
   },
   {
     label: "Sustainability badge",
@@ -43,7 +43,7 @@ export const PROCESS = [
   {
     id: "delivery",
     title: "Delivery",
-    body: "Ocean or air freight, U.S. customs, and local transportation are coordinated without extra NK markup.",
+    body: "Ocean or air freight, U.S. customs clearance, and local transportation without adding any markup.",
   },
 ];
 
@@ -86,7 +86,7 @@ export const CAPABILITIES = [
       "Competitive ocean and air freight arranged through close provider relationships",
       "U.S. customs and local transportation coordinated door to door",
       "No extra NK charge for logistics support",
-      "100% inspection rather than small random end checks",
+      "Full inspection rather than small random end checks",
     ],
     photo: PHOTO.fabricWarehouse,
   },
@@ -163,7 +163,7 @@ export const PRODUCTS: ProductItem[] = [
   },
   {
     id: "taco-bell-tee",
-    name: "Taco Bell's Tee",
+    name: "Taco Bell",
     group: "non-denim",
     category: "knitwear",
     photo: PHOTO.crewShirt,
@@ -405,15 +405,11 @@ export const DIFFERENTIATORS = [
   },
   {
     title: "Zero markup logistics",
-    body: "Ocean or air freight, U.S. customs, and local transportation are coordinated without extra NK markup.",
+    body: "Ocean or air freight, U.S. customs clearance, and local transportation without adding any markup.",
   },
   {
     title: "Maximum Quality Control",
     body: "NK checks production from fabric through final shipment, rejecting work that does not meet the agreed standard.",
-  },
-  {
-    title: "Sustainable & ethical",
-    body: "Audited factories, fair conditions, and low impact materials available on request.",
   },
   {
     title: "End to end partnership",
@@ -435,8 +431,8 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Taco Bell tee work and custom knit collections show NK's ability to support recognizable branded merchandise.",
-    name: "Taco Bell tee",
+      "Taco Bell work and custom knit collections show NK's ability to support recognizable branded merchandise.",
+    name: "Taco Bell",
     role: "Branded knitwear",
     industry: "Merchant apparel",
   },

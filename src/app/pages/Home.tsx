@@ -5,7 +5,6 @@ import {
   PenTool,
   Factory,
   Truck,
-  Leaf,
   Globe,
   Handshake,
   Award,
@@ -66,7 +65,7 @@ const CAP_PREVIEW = [
   },
 ];
 
-const DIFF_ICONS = [Handshake, Truck, Award, Leaf, Factory, Globe];
+const DIFF_ICONS = [Handshake, Truck, Award, Factory, Globe];
 const STAT_ICONS = [CalendarClock, UsersRound, Award, MapPinned];
 const PROCESS_ICONS = [MessageSquareText, Ruler, Factory, ClipboardList, Package];
 const PROCESS_ICON_COLORS = [
@@ -137,8 +136,8 @@ function HomeProductStory({ product }: { product: ProductItem }) {
             <dd className="line-clamp-2 text-[12px] leading-[1.42] text-white/76">{product.madeFrom}</dd>
           </div>
           <div className="grid gap-1.5 border-t border-white/[0.08] px-4 py-3 sm:grid-cols-[6.25rem_1fr] sm:gap-4">
-            <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/42">Finish</dt>
-            <dd className="line-clamp-2 text-[12px] leading-[1.42] text-white/76">{product.finish}</dd>
+            <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/42">Finishes</dt>
+            <dd className="line-clamp-2 text-[12px] leading-[1.42] text-white/76">Variety of Finishes available as per client requirements, locally or imported.</dd>
           </div>
         </dl>
 
@@ -331,7 +330,7 @@ export default function Home() {
               </div>
               <div className="lg:justify-self-end">
                 <p className="max-w-[54ch] text-[1rem] leading-[1.6] text-body">
-                  A concise gateway into the new product references, with material and finish details kept on the Products page where buyers expect them.
+                  NK builds fabric from scratch through custom knit and weave processes, engineered to each buyer's exact content and finish requirements rather than fixed retail options.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <CTAButton to="/portfolio#product-launch" variant="primary" arrow>

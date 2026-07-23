@@ -92,7 +92,7 @@ const CASE_STUDIES = [
   },
   {
     photo: PHOTO.crewShirt,
-    client: "Taco Bell tees",
+    client: "Taco Bell",
     challenge: "Branded tees produced to buyer artwork, with approved fits and repeatable sizing across reorders.",
     proof: "Retail recognizable merchandise work with print clarity and hand feel held consistent run after run.",
   },
@@ -141,9 +141,9 @@ function ProductSpecSummary({ product }: { product: ProductItem }) {
       </div>
       <div className="grid gap-1.5 border-t border-[var(--hairline)] px-4 py-3 sm:grid-cols-[6.5rem_1fr] sm:gap-4">
         <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-          Finish
+          Finishes
         </dt>
-        <dd className="line-clamp-2 text-[11px] leading-[1.45] text-body">{product.finish}</dd>
+        <dd className="line-clamp-2 text-[11px] leading-[1.45] text-body">Variety of Finishes available as per client requirements, locally or imported.</dd>
       </div>
     </dl>
   );

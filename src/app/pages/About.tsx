@@ -45,7 +45,7 @@ const JOURNEY = [
 const COMPARISON = [
   { label: "Family owned accountability", nk: true, them: false },
   { label: "Zero markup freight, customs, and local transport", nk: true, them: false },
-  { label: "100% final quality control", nk: true, them: false },
+  { label: "Maximum quality control", nk: true, them: false },
   { label: "U.S. based service team", nk: true, them: false },
   { label: "Sustainable material options", nk: true, them: false },
   { label: "Hidden brokerage and handling fees", nk: false, them: true },
@@ -105,7 +105,7 @@ export default function About() {
                 </p>
                 <p>
                   The redesigned site keeps that story close to the proof: zero
-                  markup logistics support, 100% inspection, sustainable materials,
+                  markup logistics support, full inspection, sustainable materials,
                   ethical factories, and long term client relationships such as Trail Life.
                 </p>
               </div>
