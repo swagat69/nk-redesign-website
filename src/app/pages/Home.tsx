@@ -324,39 +324,6 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="pt-4 md:pt-8">
-        <Container>
-          <div className="grid gap-6 rounded-[24px] border border-[var(--hairline)] bg-[var(--surface-soft)] p-7 md:grid-cols-[1.15fr_0.85fr] md:items-center md:p-9">
-            <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--nk-red)]">
-                Fabric development
-              </p>
-              <h2
-                className="mt-3 max-w-[20ch] text-[clamp(1.6rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.04em] text-ink"
-                style={{ fontWeight: 500 }}
-              >
-                From yarn to garment, built to your spec.
-              </h2>
-              <p className="mt-4 max-w-[52ch] text-[15px] leading-[1.6] text-body">
-                NK develops fabric from scratch through custom knit and weave processes,
-                engineered to each buyer's exact content, GSM, and finish requirements,
-                not limited to fixed stock.
-              </p>
-            </div>
-            <ul className="flex flex-wrap gap-2.5 md:justify-end">
-              {["Any fibre blend", "Knit or woven", "Locally or imported"].map((chip) => (
-                <li
-                  key={chip}
-                  className="inline-flex items-center rounded-full border border-[var(--hairline)] bg-background px-4 py-2 text-[13px] font-semibold text-ink"
-                >
-                  {chip}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </section>
-
       <section className="py-14 md:py-20" id="featured-products">
         <Container>
           <div className="relative isolate overflow-hidden rounded-[30px] bg-[var(--surface-soft)] p-5 shadow-[0_24px_70px_rgba(68,55,35,0.1)] md:p-8 lg:p-10">
