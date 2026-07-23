@@ -133,7 +133,15 @@ function HomeProductStory({ product }: { product: ProductItem }) {
         <dl className="mt-4 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06]">
           <div className="grid gap-1.5 px-4 py-3 sm:grid-cols-[6.25rem_1fr] sm:gap-4">
             <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/42">Made from</dt>
-            <dd className="line-clamp-2 text-[12px] leading-[1.42] text-white/76">{product.madeFrom}</dd>
+            <dd className="text-[12px] leading-[1.42] text-white/76">
+              <span className="line-clamp-2 block">{product.madeFrom}</span>
+              <span className="mt-1.5 flex items-center gap-1.5 text-white/55">
+                or engineered to your spec
+                <span className="rounded-full bg-white/12 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-white/75">
+                  Customizable
+                </span>
+              </span>
+            </dd>
           </div>
           <div className="grid gap-1.5 border-t border-white/[0.08] px-4 py-3 sm:grid-cols-[6.25rem_1fr] sm:gap-4">
             <dt className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/42">Finishes</dt>
@@ -236,7 +244,8 @@ export default function Home() {
                     <p data-hero-copy className="mt-5 max-w-[52ch] text-[1rem] leading-[1.6] text-white/80 md:text-[1.1rem]">
                       NK specializes in uniforms of all types, streetwear and trendy
                       fashion, merchant based apparel, men, women, and children lines,
-                      and 100% customized private labels.
+                      and 100% customized private labels, all made from fabric NK
+                      develops to each buyer's spec.
                     </p>
 
                     <div data-hero-actions className="mt-7 flex flex-wrap gap-3">
@@ -315,6 +324,39 @@ export default function Home() {
         </Container>
       </section>
 
+      <section className="pt-4 md:pt-8">
+        <Container>
+          <div className="grid gap-6 rounded-[24px] border border-[var(--hairline)] bg-[var(--surface-soft)] p-7 md:grid-cols-[1.15fr_0.85fr] md:items-center md:p-9">
+            <div>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--nk-red)]">
+                Fabric development
+              </p>
+              <h2
+                className="mt-3 max-w-[20ch] text-[clamp(1.6rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.04em] text-ink"
+                style={{ fontWeight: 500 }}
+              >
+                From yarn to garment, built to your spec.
+              </h2>
+              <p className="mt-4 max-w-[52ch] text-[15px] leading-[1.6] text-body">
+                NK develops fabric from scratch through custom knit and weave processes,
+                engineered to each buyer's exact content, GSM, and finish requirements,
+                not limited to fixed stock.
+              </p>
+            </div>
+            <ul className="flex flex-wrap gap-2.5 md:justify-end">
+              {["Any fibre blend", "Knit or woven", "Locally or imported"].map((chip) => (
+                <li
+                  key={chip}
+                  className="inline-flex items-center rounded-full border border-[var(--hairline)] bg-background px-4 py-2 text-[13px] font-semibold text-ink"
+                >
+                  {chip}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-14 md:py-20" id="featured-products">
         <Container>
           <div className="relative isolate overflow-hidden rounded-[30px] bg-[var(--surface-soft)] p-5 shadow-[0_24px_70px_rgba(68,55,35,0.1)] md:p-8 lg:p-10">
@@ -330,7 +372,7 @@ export default function Home() {
               </div>
               <div className="lg:justify-self-end">
                 <p className="max-w-[54ch] text-[1rem] leading-[1.6] text-body">
-                  NK builds fabric from scratch through custom knit and weave processes, engineered to each buyer's exact content and finish requirements rather than fixed retail options.
+                  Explore NK's denim and non denim ranges, each produced to your specification with material and finish detail carried through to every product.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <CTAButton to="/portfolio#product-launch" variant="primary" arrow>

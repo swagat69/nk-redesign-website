@@ -1,4 +1,5 @@
 import {
+  Layers,
   PenTool,
   Factory,
   Truck,
@@ -23,13 +24,14 @@ import { PageHero } from "../components/site/PageHero";
 import { img } from "../lib/images";
 import { CAPABILITIES, PROCESS } from "../lib/content";
 
-const CAPABILITY_ICONS = [PenTool, Factory, Truck, Leaf];
+const CAPABILITY_ICONS = [Layers, PenTool, Factory, Truck, Leaf];
 const PROCESS_ICONS = [MessageSquareText, Ruler, Factory, ClipboardList, Package];
 const CAPABILITY_ICON_COLORS = [
   { background: "var(--clay-lavender)", color: "var(--ink)" },
   { background: "var(--clay-peach)", color: "var(--ink)" },
   { background: "var(--clay-ochre)", color: "var(--ink)" },
   { background: "var(--clay-mint)", color: "var(--ink)" },
+  { background: "var(--clay-teal)", color: "#ffffff" },
 ];
 const PROCESS_ICON_COLORS = [
   { background: "var(--clay-lavender)", color: "var(--ink)" },
@@ -69,7 +71,7 @@ export default function Capabilities() {
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none 2xl:whitespace-nowrap"
           />
-          <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {CAPABILITIES.map((c, i) => {
               const Icon = CAPABILITY_ICONS[i % CAPABILITY_ICONS.length];
               return (

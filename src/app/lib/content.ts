@@ -49,6 +49,20 @@ export const PROCESS = [
 
 export const CAPABILITIES = [
   {
+    id: "fabric-development",
+    eyebrow: "Fabric",
+    title: "Custom Fabric Development",
+    summary:
+      "NK builds fabric from scratch through custom knit and weave processes, engineered to each buyer's content, GSM, and finish requirements rather than fixed stock.",
+    points: [
+      "Any fibre blend developed to spec, from cotton and poly to hemp and performance yarns",
+      "Knit or woven construction built to the required weight and hand feel",
+      "Variety of finishes available as per client requirements, locally or imported",
+      "Fabric engineered around the customer's target, not limited to shelf options",
+    ],
+    photo: PHOTO.comfortTees,
+  },
+  {
     id: "design",
     eyebrow: "Design",
     title: "Design & Prototyping",
