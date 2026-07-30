@@ -301,3 +301,10 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Client logo marquee: track holds the logo list twice, so -50% lands
+   exactly on the loop point. */
+@keyframes logo-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

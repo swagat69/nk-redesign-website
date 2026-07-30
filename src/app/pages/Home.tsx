@@ -289,9 +289,9 @@ export default function Home() {
       <section className="py-12 md:py-16">
         <Container>
           <p className="text-center text-[12px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-            Trusted by brands and buyers worldwide
+            Apparel produced for
           </p>
-          <div className="mx-auto mt-7 max-w-5xl">
+          <div className="mt-7">
             <ClientLogoCards />
           </div>
           <RevealGroup className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
