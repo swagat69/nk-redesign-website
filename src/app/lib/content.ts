@@ -137,6 +137,97 @@ export type ProductItem = {
   featured?: boolean;
 };
 
+/* Client supplied gallery (2026-07 batch): 34 production photos added to the
+   catalog under the existing category structure. Spec copy is shared per
+   product family; every piece is built to buyer spec anyway. */
+const GALLERY_SPECS = {
+  polo: {
+    category: "knitwear",
+    madeFrom: "Cotton pique, jersey, or cotton/poly performance knit to spec.",
+    detail: "Cut and sew polo construction with collar, placket, and sleeve options.",
+    finish: "Soft wash, tipping, embroidery, or retail ready presentation.",
+    customization: "Fabric weight, collar, placket, trims, labels, and packaging.",
+  },
+  knit: {
+    category: "knitwear",
+    madeFrom: "Cotton or cotton/poly jersey tuned for hand feel and drape.",
+    detail: "Knit tops with approved fits, consistent grading, and repeat sizing.",
+    finish: "Garment wash, print or embroidery decoration, retail folding.",
+    customization: "Fabric, fit, neck label, artwork, colors, and size scale.",
+  },
+  woven: {
+    category: "wovens",
+    madeFrom: "Yarn dyed checks, poplin, twill, or buyer specified woven fabric.",
+    detail: "Full woven shirt construction with collar, cuff, and pocket options.",
+    finish: "Garment wash and pressing for a retail ready presentation.",
+    customization: "Fabric, color, buttons, collar, cuff, labels, and packaging.",
+  },
+  outerwear: {
+    category: "outerwear",
+    madeFrom: "Fleece, French terry, or quilted knit constructions to spec.",
+    detail: "Hoods, zippers, drawcords, pockets, and paneling built to approved fit.",
+    finish: "Embroidery, patches, wash treatments, or structured finishing.",
+    customization: "Weight, closure, pocketing, trims, decoration, and packing.",
+  },
+  bottoms: {
+    category: "bottoms",
+    madeFrom: "Cotton twill, canvas, linen blends, or knit fabrics by use case.",
+    detail: "Waistband, pocketing, and silhouette options with approved grading.",
+    finish: "Soft wash shades and color directions from the client range.",
+    customization: "Fit, pocket map, waistband, colorway, labels, and packing.",
+  },
+} as const;
+
+const GALLERY_ITEMS: Array<{ id: string; name: string; spec: keyof typeof GALLERY_SPECS; blurb?: string }> = [
+  { id: "polo-cream-tipped", name: "Cream Tipped Polo", spec: "polo" },
+  { id: "polo-cream-contrast", name: "Contrast Shoulder Polo", spec: "polo" },
+  { id: "polo-blue-print", name: "Printed Performance Polo", spec: "polo" },
+  { id: "polo-ls-black", name: "Long Sleeve Polo, Black", spec: "polo" },
+  { id: "polo-ls-blue", name: "Long Sleeve Polo, Blue", spec: "polo" },
+  { id: "polo-pique-black", name: "Pique Polo, Black", spec: "polo" },
+  { id: "polo-pique-red", name: "Pique Polo, Red", spec: "polo" },
+  { id: "tee-navy-crew", name: "Navy Crew Tee", spec: "knit" },
+  { id: "tee-vneck-blue", name: "V Neck Tee", spec: "knit" },
+  { id: "henley-ls-black", name: "Long Sleeve Henley", spec: "knit" },
+  { id: "henley-tee-green", name: "Henley Tee, Green", spec: "knit" },
+  { id: "tank-graphic-navy", name: "Graphic Tank", spec: "knit" },
+  { id: "tank-green", name: "Athletic Tank, Green", spec: "knit" },
+  { id: "tank-charcoal", name: "Athletic Tank, Charcoal", spec: "knit" },
+  { id: "woven-green-check", name: "Green Check Shirt", spec: "woven" },
+  { id: "woven-black-dress", name: "Black Dress Shirt", spec: "woven" },
+  { id: "woven-white-oxford", name: "White Oxford Shirt", spec: "woven" },
+  { id: "woven-blue-gingham", name: "Blue Gingham Shirt", spec: "woven" },
+  { id: "woven-black-casual", name: "Black Casual Shirt", spec: "woven" },
+  { id: "woven-plaid-flannel", name: "Plaid Flannel Shirt", spec: "woven" },
+  { id: "shirt-ss-black", name: "Short Sleeve Shirt, Black", spec: "woven" },
+  { id: "shirt-ss-sage", name: "Short Sleeve Shirt, Sage", spec: "woven" },
+  { id: "hoodie-quilted-olive", name: "Quilted Hoodie, Olive", spec: "outerwear" },
+  { id: "hoodie-quilted-grey", name: "Quilted Hoodie, Grey", spec: "outerwear" },
+  { id: "hoodie-zip-navy", name: "Zip Hoodie, Navy", spec: "outerwear" },
+  { id: "shorts-sweat-set-a", name: "Sweat Shorts Range", spec: "bottoms" },
+  { id: "shorts-sweat-set-b", name: "Zip Pocket Sweat Shorts", spec: "bottoms" },
+  { id: "shorts-jersey-set", name: "Jersey Shorts Range", spec: "bottoms" },
+  { id: "shorts-cargo-olive", name: "Cargo Shorts, Olive", spec: "bottoms" },
+  { id: "shorts-cargo-camo", name: "Cargo Shorts, Camo", spec: "bottoms" },
+  { id: "shorts-cargo-khaki", name: "Cargo Shorts, Khaki", spec: "bottoms" },
+  { id: "pants-cargo-brown", name: "Cargo Pants, Brown", spec: "bottoms" },
+  { id: "pants-linen-black", name: "Linen Pants, Black", spec: "bottoms" },
+  { id: "pants-linen-khaki", name: "Linen Pants, Khaki", spec: "bottoms" },
+];
+
+export const GALLERY_PRODUCTS: ProductItem[] = GALLERY_ITEMS.map((item) => ({
+  id: item.id,
+  name: item.name,
+  group: "non-denim",
+  category: GALLERY_SPECS[item.spec].category,
+  photo: `/client-gallery/${item.id}.webp`,
+  blurb: item.blurb ?? "From the client's latest production photo set.",
+  madeFrom: GALLERY_SPECS[item.spec].madeFrom,
+  detail: GALLERY_SPECS[item.spec].detail,
+  finish: GALLERY_SPECS[item.spec].finish,
+  customization: GALLERY_SPECS[item.spec].customization,
+}));
+
 export const PRODUCTS: ProductItem[] = [
   {
     id: "uniforms",
@@ -396,6 +487,7 @@ export const PRODUCTS: ProductItem[] = [
     finish: "Retail folding, branded trims, hangtags, care labels, and carton level organization.",
     customization: "Pattern, grading, labels, trims, decoration, packing method, and delivery plan.",
   },
+  ...GALLERY_PRODUCTS,
 ];
 
 export const PRODUCT_PAGE_FILTERS = [

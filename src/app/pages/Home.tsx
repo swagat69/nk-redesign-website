@@ -29,6 +29,7 @@ import { Reveal, RevealGroup } from "../components/site/anim";
 import { FeatureCard } from "../components/site/FeatureCard";
 import { CTASection } from "../components/site/CTASection";
 import { ClientLogoCards } from "../components/site/ClientLogos";
+import { ClientShowcase } from "../components/site/ClientShowcase";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { img, PHOTO } from "../lib/images";
 import { gsap, useGSAP, EASE, EASE_EXPO, prefersReducedMotion } from "../lib/gsap";
@@ -356,6 +357,8 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <ClientShowcase />
 
       <section className="py-16 md:py-24">
         <Container>
