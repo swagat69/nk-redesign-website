@@ -21,7 +21,7 @@ const CLIENT_LOGOS: { name: string; src: string; h: number }[] = [
 
 function LogoTile({ logo }: { logo: (typeof CLIENT_LOGOS)[number] }) {
   return (
-    <div className="flex h-24 w-40 shrink-0 items-center justify-center sm:w-44">
+    <div className="flex h-24 shrink-0 items-center justify-center">
       <img
         src={img(logo.src)}
         alt={`${logo.name} logo`}
@@ -48,7 +48,7 @@ export function ClientLogoCards() {
   // Reduced motion (also used for the Figma capture recipe): static wrap grid.
   if (reduced) {
     return (
-      <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+      <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 md:gap-x-16 lg:gap-x-20">
         {CLIENT_LOGOS.map((logo) => (
           <li key={logo.name}>
             <LogoTile logo={logo} />
@@ -72,13 +72,13 @@ export function ClientLogoCards() {
     >
       <div
         ref={trackRef}
-        className="flex w-max items-center gap-2 [animation:logo-marquee_48s_linear_infinite] group-hover:[animation-play-state:paused]"
+        className="flex w-max items-center [animation:logo-marquee_48s_linear_infinite] group-hover:[animation-play-state:paused]"
       >
         {[0, 1].map((pass) => (
           <div
             key={pass}
             aria-hidden={pass === 1}
-            className="flex items-center gap-2 pr-2"
+            className="flex items-center gap-10 pr-10 md:gap-16 md:pr-16 lg:gap-20 lg:pr-20"
           >
             {CLIENT_LOGOS.map((logo) => (
               <LogoTile key={`${pass}-${logo.name}`} logo={logo} />

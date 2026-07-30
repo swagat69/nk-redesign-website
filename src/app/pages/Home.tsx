@@ -385,8 +385,8 @@ export default function Home() {
               eyebrow="Capabilities"
               title="Every service under accountable ownership."
               intro="From design to door delivery, NK keeps sampling, production, quality control, packaging, customs, and all logistics seamlessly connected."
+              introClassName="max-w-[62ch]"
               titleClassName="text-[var(--nk-red)]"
-              introClassName="max-w-none lg:whitespace-nowrap"
             />
             <ArrowLink to="/capabilities" className="shrink-0">
               All capabilities

@@ -94,7 +94,7 @@ export const CAPABILITIES = [
   {
     id: "logistics",
     eyebrow: "Logistics",
-    title: "Logistics & Quality Assurance",
+    title: "Logistics",
     summary:
       "Ocean and air freight, customs support, local transport, zero markup logistics, daily inspections, and Maximum Quality Control.",
     points: [

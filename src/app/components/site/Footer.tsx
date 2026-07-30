@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, CalendarClock, Award } from "lucide-react";
+import { Phone, MapPin, CalendarClock, Award } from "lucide-react";
 import logoUrl from "../../../assets/nk-logo.png";
 import { Container } from "./primitives";
 import { BrandLogo } from "./BrandLogo";
@@ -21,7 +21,7 @@ const COLUMNS = [
     links: [
       { to: "/capabilities", label: "Design & Prototyping" },
       { to: "/capabilities", label: "Manufacturing" },
-      { to: "/capabilities", label: "Logistics & QC" },
+      { to: "/capabilities", label: "Logistics" },
       { to: "/capabilities", label: "Sustainability" },
       { to: "/portfolio", label: "Product Range" },
       { to: "/blog", label: "Resources" },
@@ -33,6 +33,7 @@ const FOOTER_CONTACTS = [
   {
     name: "Ali",
     role: "Marketing Manager",
+    email: "sales@nkinternationalusa.com",
     phones: [
       { region: "USA", number: "+1 (202) 820-4561", tel: "+12028204561" },
       { region: "PAK", number: "+92 322 825 2300", tel: "+923228252300" },
@@ -41,6 +42,7 @@ const FOOTER_CONTACTS = [
   {
     name: "Primary Contact",
     role: "NK International",
+    email: "sales@nkinternationalusa.com",
     phones: [
       { region: "USA", number: "+1 (202) 341-4493", tel: "+12023414493" },
       { region: "PAK", number: "+92 313 821 8379", tel: "+923138218379" },
@@ -86,7 +88,7 @@ export function Footer() {
             <BrandLogo />
             <p className="mt-5 max-w-[34ch] text-[15px] leading-[1.6] text-body">
               A family owned custom apparel manufacturing partner turning ideas
-              into finished garments with transparent pricing, QC, and care.
+              into finished garments with maximum quality control and care.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 text-[13px] font-medium text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
@@ -126,14 +128,6 @@ export function Footer() {
               Get in touch
             </h3>
             <ul className="mt-5 grid gap-5 text-[15px]">
-              <li className="grid grid-cols-[24px_minmax(0,1fr)] items-start gap-4 text-body">
-                <span className="flex h-7 w-6 items-center justify-center text-[var(--nk-red)]">
-                  <Mail className="size-4 shrink-0" />
-                </span>
-                <a href="mailto:sales@nkinternationalusa.com" className="min-w-0 pt-0.5 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
-                  sales@nkinternationalusa.com
-                </a>
-              </li>
               {FOOTER_CONTACTS.map((c) => (
                 <li key={c.name} className="grid grid-cols-[24px_minmax(0,1fr)] items-start gap-4 text-body">
                   <span className="flex h-7 w-6 items-center justify-center text-[var(--nk-red)]">
@@ -145,6 +139,10 @@ export function Footer() {
                       <span className="font-normal text-muted-foreground"> {"/"} {c.role}</span>
                     </div>
                     <div className="mt-1.5 grid gap-1 text-[14px]">
+                      <a href={`mailto:${c.email}`} className="grid grid-cols-[34px_minmax(0,1fr)] items-baseline gap-2 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">Email</span>
+                        <span className="min-w-0 truncate text-[13px]">{c.email}</span>
+                      </a>
                       {c.phones.map((p) => (
                         <a key={p.tel} href={`tel:${p.tel}`} className="grid grid-cols-[34px_minmax(0,1fr)] items-baseline gap-2 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
                           <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">{p.region}</span>

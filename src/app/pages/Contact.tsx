@@ -117,7 +117,7 @@ export default function Contact() {
           </h1>
           <p className="mt-6 max-w-[54ch] text-[1.125rem] leading-[1.55] text-body">
             Tell us what you are making. The more detail you share, the faster we can
-            come back with materials, MOQs, timeline, and transparent pricing.
+            come back with materials, MOQs, timeline, and a clear quote.
           </p>
         </Container>
       </section>
@@ -221,36 +221,36 @@ export default function Contact() {
             <aside className="space-y-5">
               <div className="rounded-[20px] bg-[var(--clay-teal)] p-7 text-white">
                 <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-white/70">Support Channels</h3>
-                <ul className="mt-5 grid gap-4">
+                <ul className="mt-5 grid gap-5">
                   <li className="grid grid-cols-[32px_minmax(0,1fr)] items-start gap-4">
-                    <span className="flex h-8 w-8 items-center justify-center text-[var(--clay-mint)]">
+                    <span className="flex h-6 w-8 items-center justify-start text-[var(--clay-mint)]">
                       <Phone className="size-5 shrink-0" />
                     </span>
                     <div>
-                      <a href="tel:+12023414493" className="inline-flex min-h-8 items-center hover:underline">+1 (202) 341-4493</a>
-                      <p className="text-[13px] text-white/65">Weekday business hours ET</p>
+                      <a href="tel:+12023414493" className="block leading-6 hover:underline">+1 (202) 341-4493</a>
+                      <p className="mt-0.5 text-[13px] text-white/65">Weekday business hours ET</p>
                     </div>
                   </li>
                   <li className="grid grid-cols-[32px_minmax(0,1fr)] items-start gap-4">
-                    <span className="flex h-8 w-8 items-center justify-center text-[var(--clay-mint)]">
+                    <span className="flex h-6 w-8 items-center justify-start text-[var(--clay-mint)]">
                       <Mail className="size-5 shrink-0" />
                     </span>
-                    <a href="mailto:sales@nkinternationalusa.com" className="min-w-0 pt-0.5 leading-[1.45] break-all hover:underline">sales@nkinternationalusa.com</a>
+                    <a href="mailto:sales@nkinternationalusa.com" className="block min-w-0 truncate leading-6 hover:underline">sales@nkinternationalusa.com</a>
                   </li>
                   <li className="grid grid-cols-[32px_minmax(0,1fr)] items-start gap-4">
-                    <span className="flex h-8 w-8 items-center justify-center text-[var(--clay-mint)]">
+                    <span className="flex h-6 w-8 items-center justify-start text-[var(--clay-mint)]">
                       <MessageCircle className="size-5 shrink-0" />
                     </span>
                     <div>
-                      <span>WhatsApp Business</span>
-                      <p className="text-[13px] text-white/65">Fastest for quick questions</p>
+                      <span className="block leading-6">WhatsApp Business</span>
+                      <p className="mt-0.5 text-[13px] text-white/65">Fastest for quick questions</p>
                     </div>
                   </li>
                   <li className="grid grid-cols-[32px_minmax(0,1fr)] items-start gap-4">
-                    <span className="flex h-8 w-8 items-center justify-center text-[var(--clay-mint)]">
+                    <span className="flex h-6 w-8 items-center justify-start text-[var(--clay-mint)]">
                       <Clock className="size-5 shrink-0" />
                     </span>
-                    <p className="pt-0.5 text-[14px] leading-[1.45] text-white/75">Quote requests answered within a few business days.</p>
+                    <p className="leading-6 text-white/75">Quote requests answered within a few business days.</p>
                   </li>
                 </ul>
               </div>
@@ -272,9 +272,12 @@ export default function Contact() {
                         <span className="min-w-0 leading-[1.45] text-ink">{p.number}</span>
                       </a>
                     ))}
-                    <a href={`mailto:${c.email}`} className="grid grid-cols-[22px_minmax(0,1fr)] items-start gap-3 transition-colors hover:text-[var(--nk-red)]">
-                      <Mail className="mt-1 size-4 shrink-0 text-[var(--nk-red)]" />
-                      <span className="min-w-0 break-all leading-[1.45]">{c.email}</span>
+                    <a href={`mailto:${c.email}`} className="grid grid-cols-[74px_minmax(0,1fr)] items-center gap-3 transition-colors hover:text-[var(--nk-red)]">
+                      <span className="inline-flex items-center gap-2">
+                        <Mail className="size-4 shrink-0 text-[var(--nk-red)]" />
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.08em]">Email</span>
+                      </span>
+                      <span className="min-w-0 truncate text-[13px] leading-[1.45] text-ink">{c.email}</span>
                     </a>
                   </div>
                 </div>

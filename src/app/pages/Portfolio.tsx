@@ -137,12 +137,7 @@ function ProductSpecSummary({ product }: { product: ProductItem }) {
         <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
           Made from
         </dt>
-        <dd className="text-[11px] leading-[1.45] text-body">
-          <span className="line-clamp-2 block">{product.madeFrom}</span>
-          <span className="mt-2.5 inline-block rounded-full bg-[var(--nk-red)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-white">
-            Customizable
-          </span>
-        </dd>
+        <dd className="line-clamp-2 text-[11px] leading-[1.45] text-body">{product.madeFrom}</dd>
       </div>
       <div className="grid gap-1.5 border-t border-[var(--hairline)] px-4 py-3 sm:grid-cols-[6.5rem_1fr] sm:gap-4">
         <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
@@ -255,25 +250,27 @@ function ProductCard({ product }: { product: ProductItem }) {
     <article className="group relative flex flex-col overflow-hidden rounded-[30px] border border-[var(--hairline)] bg-[linear-gradient(180deg,var(--card),var(--surface-card))] p-2 transition-[border-color,box-shadow,transform] duration-500 ease-out hover:-translate-y-1 hover:border-[var(--nk-red-border)] hover:shadow-[0_18px_54px_rgba(68,55,35,0.10)]">
       <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-80" />
       <div className="p-2 pb-0">
-        <div className={cn("relative aspect-[4/3] overflow-hidden rounded-[24px] ring-1 ring-black/[0.04]", isPdfVisual ? "bg-white" : "bg-[var(--surface-card)]")}>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] bg-white ring-1 ring-black/[0.04]">
           <ImageWithFallback
             src={img(product.photo, 760, 570)}
             alt={product.name}
             loading="lazy"
             decoding="async"
             className={cn(
-              "size-full transition-transform duration-700 ease-out group-hover:scale-[1.025]",
-              isPdfVisual ? "object-contain p-2" : "object-cover",
+              "size-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.025]",
+              isPdfVisual ? "p-2" : "p-3",
             )}
           />
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),transparent_38%,rgba(0,0,0,0.08))] opacity-70 transition-opacity duration-500 group-hover:opacity-45" />
         </div>
       </div>
 
       <div className="flex flex-1 flex-col px-5 pb-5 pt-4 md:px-6 md:pb-5">
-        <div className="mb-2.5 flex items-center gap-3">
+        <div className="mb-2.5 flex items-center justify-between gap-3">
           <span className="text-[10px] font-semibold uppercase leading-none tracking-[0.18em] text-[var(--nk-red)]">
             {product.category.replace("-", " ")}
+          </span>
+          <span className="inline-flex items-center rounded-full border border-[var(--hairline)] bg-background/70 px-2.5 py-1 text-[9px] font-semibold uppercase leading-none tracking-[0.1em] text-muted-foreground">
+            Customizable
           </span>
         </div>
         <h3 className="text-[1.28rem] leading-[1.12] tracking-[-0.035em] text-ink transition-colors duration-300 group-hover:text-[var(--nk-red-subtle)]">
