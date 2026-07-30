@@ -5,7 +5,7 @@ import {
   Mail,
   Phone,
   MessageCircle,
-  MapPin,
+  UserRound,
   Clock,
   Upload,
   ChevronDown,
@@ -35,18 +35,24 @@ const PRODUCT_TYPES = [
   "Private Label / Other",
 ];
 
-const OFFICES = [
+const CONTACTS = [
   {
-    country: "United States",
-    address: "1200 Harbor Blvd, Suite 210\nWeehawken, NJ 07086",
-    phone: "+1 (201) 555-1234",
+    name: "Ali",
+    role: "Marketing Manager",
     email: "sales@nkinternationalusa.com",
+    phones: [
+      { region: "USA", number: "+1 (202) 820-4561", tel: "+12028204561" },
+      { region: "Pakistan", number: "+92 322 825 2300", tel: "+923228252300" },
+    ],
   },
   {
-    country: "Pakistan",
-    address: "Plot 14, Korangi Industrial Area\nKarachi 74900",
-    phone: "+92 21 555 0199",
-    email: "production@nkinternationalusa.com",
+    name: "Primary Contact",
+    role: "NK International",
+    email: "sales@nkinternationalusa.com",
+    phones: [
+      { region: "USA", number: "+1 (202) 341-4493", tel: "+12023414493" },
+      { region: "Pakistan", number: "+92 313 821 8379", tel: "+923138218379" },
+    ],
   },
 ];
 
@@ -221,7 +227,7 @@ export default function Contact() {
                       <Phone className="size-5 shrink-0" />
                     </span>
                     <div>
-                      <a href="tel:+12015551234" className="inline-flex min-h-8 items-center hover:underline">+1 (201) 555-1234</a>
+                      <a href="tel:+12023414493" className="inline-flex min-h-8 items-center hover:underline">+1 (202) 341-4493</a>
                       <p className="text-[13px] text-white/65">Weekday business hours ET</p>
                     </div>
                   </li>
@@ -249,21 +255,26 @@ export default function Contact() {
                 </ul>
               </div>
 
-              {OFFICES.map((o) => (
-                <div key={o.country} className="rounded-[20px] border border-[var(--hairline)] bg-card p-7">
+              {CONTACTS.map((c) => (
+                <div key={c.name} className="rounded-[20px] border border-[var(--hairline)] bg-card p-7">
                   <div className="flex items-center gap-2">
-                    <MapPin className="size-4 text-[var(--nk-red)]" />
-                    <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{o.country}</h3>
+                    <UserRound className="size-4 text-[var(--nk-red)]" />
+                    <h3 className="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{c.name}</h3>
                   </div>
-                  <p className="mt-4 whitespace-pre-line text-[15px] leading-[1.6] text-ink">{o.address}</p>
+                  <p className="mt-1.5 text-[14px] text-muted-foreground">{c.role}</p>
                   <div className="mt-5 grid gap-2 text-[14px] text-muted-foreground">
-                    <a href={`tel:${o.phone}`} className="grid grid-cols-[22px_minmax(0,1fr)] items-start gap-3 transition-colors hover:text-[var(--nk-red)]">
-                      <Phone className="mt-1 size-4 shrink-0 text-[var(--nk-red)]" />
-                      <span className="min-w-0 leading-[1.45]">{o.phone}</span>
-                    </a>
-                    <a href={`mailto:${o.email}`} className="grid grid-cols-[22px_minmax(0,1fr)] items-start gap-3 transition-colors hover:text-[var(--nk-red)]">
+                    {c.phones.map((p) => (
+                      <a key={p.tel} href={`tel:${p.tel}`} className="grid grid-cols-[74px_minmax(0,1fr)] items-center gap-3 transition-colors hover:text-[var(--nk-red)]">
+                        <span className="inline-flex items-center gap-2">
+                          <Phone className="size-4 shrink-0 text-[var(--nk-red)]" />
+                          <span className="text-[11px] font-semibold uppercase tracking-[0.08em]">{p.region === "USA" ? "USA" : "PAK"}</span>
+                        </span>
+                        <span className="min-w-0 leading-[1.45] text-ink">{p.number}</span>
+                      </a>
+                    ))}
+                    <a href={`mailto:${c.email}`} className="grid grid-cols-[22px_minmax(0,1fr)] items-start gap-3 transition-colors hover:text-[var(--nk-red)]">
                       <Mail className="mt-1 size-4 shrink-0 text-[var(--nk-red)]" />
-                      <span className="min-w-0 break-all leading-[1.45]">{o.email}</span>
+                      <span className="min-w-0 break-all leading-[1.45]">{c.email}</span>
                     </a>
                   </div>
                 </div>

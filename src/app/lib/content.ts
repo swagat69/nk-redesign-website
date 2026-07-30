@@ -2,7 +2,7 @@ import { PHOTO } from "./images";
 
 export const STATS = [
   {
-    label: "22+ years",
+    label: "25+ years",
     body: "Operating since 2000 with owner led manufacturing experience.",
   },
   {
@@ -23,7 +23,7 @@ export const PROCESS = [
   {
     id: "consultation",
     title: "Communication",
-    body: "Customers and NK staff stay fully aligned on product requirements, specifications, quantities, target pricing, and preferred shipping methods, with 24/7 support throughout the process.",
+    body: "Customers and NK staff stay fully aligned on product requirements, specifications, quantities, and preferred shipping methods, with 24/7 support throughout the process.",
   },
   {
     id: "sampling",
@@ -32,8 +32,8 @@ export const PROCESS = [
   },
   {
     id: "inspection",
-    title: "First run approval & QC",
-    body: "First run production samples are sent for approval, then NK checks the work from fabric through final shipment.",
+    title: "Final Approval to Shipping",
+    body: "NK manages quality control and production from final sample approval through shipment.",
   },
   {
     id: "production",
@@ -44,6 +44,7 @@ export const PROCESS = [
     id: "delivery",
     title: "Delivery",
     body: "Ocean or air freight, U.S. customs clearance, and local transportation without adding any markup.",
+    fine: "NK keeps clients fully informed with live shipment tracking and regular logistics updates.",
   },
 ];
 
@@ -438,21 +439,21 @@ export const DIFFERENTIATORS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Trail Life has been a long running uniform relationship built on trust and quality products.",
+      "Trail Life has been a long standing uniform partnership built on trust and consistent quality. We support this relationship through our long term private label partner, Capital Apparel.",
     name: "Trail Life uniforms",
     role: "Customized uniforms",
     industry: "Uniforms",
   },
   {
     quote:
-      "Taco Bell work and custom knit collections show NK's ability to support recognizable branded merchandise.",
+      "Taco Bell workwear and custom knit collections demonstrate NK's ability to support recognizable branded merchandise. These programs are produced through our private label customers, whose trust and loyalty we have valued for more than 20 years.",
     name: "Taco Bell",
     role: "Branded knitwear",
     industry: "Merchant apparel",
   },
   {
     quote:
-      "Dollar General appears among NK's trusted buyer proof, reinforcing the company's U.S. retail credibility.",
+      "This work was completed through one of our valued U.S. customers.",
     name: "Dollar General proof",
     role: "Buyer credibility",
     industry: "Retail",

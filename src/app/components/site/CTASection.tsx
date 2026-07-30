@@ -5,7 +5,7 @@ import { img, PHOTO } from "../../lib/images";
 export function CTASection({
   eyebrow = "Start Your Project",
   title = "Let's build your next collection.",
-  body = "Tell us what you are making. We will come back with materials, MOQs, timeline, and a transparent quote within a few business days.",
+  body = "Tell us what you are making, or what you plan to add to your product range. We will manage every stage of creation according to your requirements, working with you until the final product is fully developed.",
   primaryLabel = "Request a Quote",
   primaryTo = "/contact",
   secondaryLabel = "Book a Consultation",

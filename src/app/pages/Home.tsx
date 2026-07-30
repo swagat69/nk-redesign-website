@@ -53,14 +53,14 @@ const CAP_PREVIEW = [
     color: "teal" as const,
     icon: Factory,
     title: "Manufacturing & Customization",
-    body: "Uniforms and fashion apparel, including tees, polos, woven shirts, bottoms, belts, socks, aprons, overalls, and private label collections.",
+    body: "Uniforms and fashion apparel, including tees, polos, woven shirts, bottoms, belts, socks, aprons, overalls with private labeling option.",
     photo: PHOTO.sewingWorkshop,
   },
   {
     color: "lavender" as const,
     icon: Truck,
     title: "Logistics",
-    body: "Door Deliveries are available which includes all custom needs and local transportation without any charges.",
+    body: "Door to door delivery is available, including customs clearance and local transportation, with no additional markups or hassle. Customers pay only the actual costs charged by customs authorities and local transport providers.",
     photo: PHOTO.fabricWarehouse,
   },
 ];
@@ -433,6 +433,9 @@ export default function Home() {
                     {p.title}
                   </h3>
                   <p className="mt-2 text-[14px] leading-[1.5] text-body">{p.body}</p>
+                  {"fine" in p && p.fine ? (
+                    <p className="mt-auto pt-4 text-[12px] leading-[1.5] text-muted-foreground">{p.fine}</p>
+                  ) : null}
                 </div>
               );
             })}

@@ -197,6 +197,9 @@ export default function Capabilities() {
                     {p.title}
                   </h3>
                   <p className="mt-2 text-[14px] leading-[1.5] text-body">{p.body}</p>
+                  {"fine" in p && p.fine ? (
+                    <p className="mt-auto pt-4 text-[12px] leading-[1.5] text-muted-foreground">{p.fine}</p>
+                  ) : null}
                 </div>
               );
             })}
