@@ -62,7 +62,7 @@ export function ClientLogoCards() {
   // exactly half its own width, so the loop point is seamless at any size.
   return (
     <div
-      className="group relative overflow-hidden"
+      className="relative overflow-hidden"
       style={{
         maskImage:
           "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
@@ -72,7 +72,7 @@ export function ClientLogoCards() {
     >
       <div
         ref={trackRef}
-        className="flex w-max items-center [animation:logo-marquee_48s_linear_infinite] group-hover:[animation-play-state:paused]"
+        className="flex w-max items-center [animation:logo-marquee_48s_linear_infinite]"
       >
         {[0, 1].map((pass) => (
           <div
