@@ -58,10 +58,20 @@ function Horizon() {
         preserveAspectRatio="none"
         className="block h-full w-full"
       >
-        {/* Brand horizon: NK logo colors only (soft red tint, NK red, ink
-            black) so the footer closes on the brand identity instead of the
-            clay illustration palette. */}
-        <path d="M0 220 V120 Q240 60 480 110 T960 105 T1440 95 V220 Z" fill="var(--nk-red-border)" />
+        {/* Brand horizon: NK logo colors only (white, NK red, ink black) so
+            the footer closes on the brand identity instead of the clay
+            illustration palette. The top wave is white with an ink outline;
+            the outline is a separate open path so the shape's bottom/side
+            edges stay unstroked, and vector-effect keeps the line uniform
+            despite the non-uniform stretch. */}
+        <path d="M0 220 V120 Q240 60 480 110 T960 105 T1440 95 V220 Z" fill="#ffffff" />
+        <path
+          d="M0 120 Q240 60 480 110 T960 105 T1440 95"
+          fill="none"
+          stroke="var(--ink)"
+          strokeWidth="1"
+          vectorEffect="non-scaling-stroke"
+        />
         <path d="M0 220 V150 Q300 100 620 140 T1140 140 T1440 130 V220 Z" fill="var(--nk-red)" />
         <path d="M0 220 V180 Q360 150 760 175 T1440 170 V220 Z" fill="var(--ink)" />
       </svg>
