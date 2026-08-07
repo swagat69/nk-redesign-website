@@ -15,6 +15,7 @@ import {
   Ruler,
   ClipboardList,
   Package,
+  Warehouse,
   Quote,
 } from "lucide-react";
 import { Link } from "react-router";
@@ -61,8 +62,18 @@ const CAP_PREVIEW = [
     color: "lavender" as const,
     icon: Truck,
     title: "Logistics",
-    body: "Door to door delivery is available, including customs clearance and local transportation, with no additional markups or hassle. Customers pay only the actual costs charged by customs authorities and local transport providers.",
+    body: "NK coordinates ocean or air freight, U.S. customs clearance support, and inland transportation for products completed through our manufacturing programs, delivering directly to the customer's selected destination.",
     photo: PHOTO.fabricWarehouse,
+  },
+  {
+    color: "ochre" as const,
+    icon: Warehouse,
+    title: "Storage & Fulfillment",
+    badge: "U.S. Partner Support",
+    body: "For qualifying NK programs, finished goods can be received, inventoried, stored, and released by carton or pallet to selected U.S. destinations through our long standing partner, Capital Apparel.",
+    credit: "U.S. warehouse support through Capital Apparel.",
+    cta: { label: "Learn More", to: "/logistics-fulfillment" },
+    photo: PHOTO.foldedShirts,
   },
 ];
 
@@ -223,7 +234,7 @@ export default function Home() {
               <ImageWithFallback
                 data-hero-bg
                 src={img(PHOTO.factoryFloor, 1800, 1100)}
-                alt="Workers sewing garments on the production floor"
+                alt="Workers on the garment production floor"
                 className="absolute inset-0 -z-20 size-full object-cover"
               />
               <div className="absolute inset-0 -z-10 bg-black/45" />
@@ -393,17 +404,23 @@ export default function Home() {
             </ArrowLink>
           </div>
 
-          <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {CAP_PREVIEW.map((c) => (
               <FeatureCard
                 key={c.title}
                 color={c.color}
                 icon={c.icon}
+                badge={"badge" in c ? c.badge : undefined}
                 title={c.title}
                 body={c.body}
+                credit={"credit" in c ? c.credit : undefined}
                 photo={img(c.photo, 600, 380)}
                 photoAlt={c.title}
-              />
+              >
+                {"cta" in c && c.cta ? (
+                  <ArrowLink to={c.cta.to}>{c.cta.label}</ArrowLink>
+                ) : null}
+              </FeatureCard>
             ))}
           </RevealGroup>
         </Container>
@@ -414,7 +431,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="How it works"
             title="A clear path from brief to delivery."
-            intro="Door to door delivery is available, including customs clearance and local transportation at no additional charge."
+            intro="NK coordinates door to door delivery, including customs clearance and local transportation, without adding markup to freight."
             titleClassName="text-[var(--nk-red-subtle)]"
             introClassName="max-w-none xl:whitespace-nowrap"
           />

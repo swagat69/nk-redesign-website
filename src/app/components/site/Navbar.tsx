@@ -7,10 +7,10 @@ import { cn } from "../ui/utils";
 
 const NAV = [
   { to: "/", label: "Home", end: true },
+  { to: "/logistics-fulfillment", label: "Logistics & Fulfillment" },
   { to: "/capabilities", label: "Capabilities" },
   { to: "/portfolio", label: "Products" },
   { to: "/about", label: "About & Clients" },
-  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 

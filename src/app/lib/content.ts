@@ -106,18 +106,20 @@ export const CAPABILITIES = [
     photo: PHOTO.fabricWarehouse,
   },
   {
-    id: "sustainability",
-    eyebrow: "Ethics",
-    title: "Sustainability & Ethics",
+    id: "storage-fulfillment",
+    eyebrow: "U.S. Partner",
+    title: "Storage & Fulfillment",
     summary:
-      "Sustainable materials, ethical factories, careful packaging, and shipping designed to protect the finished goods.",
+      "Through Capital Apparel, qualifying NK programs can access U.S. receiving, inventory intake, managed storage, and scheduled distribution by carton or pallet. Goods can be held and released according to the customer's preferred timing, quantities, and destinations.",
     points: [
-      "High grade polyester, sustainable crops, and custom fabric sourcing",
-      "Factories selected for ethical practices and waste reduction",
-      "Eco friendly packaging materials where appropriate",
-      "Shipping planned to minimize delays and protect product quality",
+      "U.S. receiving and inventory intake against the packing list",
+      "Managed storage with carton or pallet quantities held on hand",
+      "Scheduled release in partial quantities on request or schedule",
+      "Outbound parcel or freight service to selected U.S. destinations",
     ],
-    photo: "/old-site/cotton-field.jpg",
+    fine: "Monitoring, climate control, insurance, and specialized handling requirements can be reviewed according to the needs of each program.",
+    cta: { label: "Explore Logistics & Fulfillment", to: "/logistics-fulfillment" },
+    photo: PHOTO.foldedShirts,
   },
 ];
 

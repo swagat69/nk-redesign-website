@@ -10,9 +10,9 @@ export function img(id: string, w = 1200, h = 800): string {
 }
 
 export const PHOTO = {
-  factoryFloor: "1741176505800-caaa3a52631a", // workers sewing in large factory
-  factoryGroup: "1577894947058-cfdae4276bef", // group working in a factory
-  sewingWorkshop: "/old-site/factory-sewing-floor.jpg", // NK sewing floor with workers (old site)
+  factoryFloor: "/stock/factory-floor-wide.jpg", // wide garment factory floor with workers (Pexels, self-hosted)
+  factoryGroup: "/stock/factory-team.jpg", // worker folding textiles in bright factory (Pexels, self-hosted)
+  sewingWorkshop: "/stock/sewing-floor.jpg", // worker at industrial sewing machine (Pexels, self-hosted)
   fabricWarehouse: "/old-site/freight-containers.jpg", // freight containers logistics (old site)
   boutiqueRacks: "/old-site/nk-polos-rack.jpg", // NK polos hanging on rack (old site)
   shirtsRack: "/old-site/nk-red-shirt.jpg", // NK red premium casual shirt (old site)

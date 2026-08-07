@@ -3,7 +3,7 @@ import {
   PenTool,
   Factory,
   Truck,
-  Leaf,
+  Warehouse,
   MessageSquareText,
   Ruler,
   ClipboardList,
@@ -14,6 +14,7 @@ import {
   Container,
   SectionHeading,
   CTAButton,
+  ArrowLink,
   CLAY_CYCLE,
   clayCardClasses,
 } from "../components/site/primitives";
@@ -24,7 +25,7 @@ import { PageHero } from "../components/site/PageHero";
 import { img } from "../lib/images";
 import { CAPABILITIES, PROCESS } from "../lib/content";
 
-const CAPABILITY_ICONS = [Layers, PenTool, Factory, Truck, Leaf];
+const CAPABILITY_ICONS = [Layers, PenTool, Factory, Truck, Warehouse];
 const PROCESS_ICONS = [MessageSquareText, Ruler, Factory, ClipboardList, Package];
 const CAPABILITY_ICON_COLORS = [
   { background: "var(--clay-lavender)", color: "var(--ink)" },
@@ -67,9 +68,9 @@ export default function Capabilities() {
           <SectionHeading
             eyebrow="Overview"
             title="Every stage, clearly owned."
-            intro="NK brings product development, production, QC, logistics, customs support, packaging, and sustainability into one accountable flow with fewer handoffs and clearer responsibility."
+            intro="NK brings product development, production, QC, packaging, logistics, customs support, and optional U.S. storage and fulfillment into one accountable flow with fewer handoffs and clearer responsibility."
             titleClassName="text-[var(--nk-red-subtle)]"
-            introClassName="max-w-none 2xl:whitespace-nowrap"
+            introClassName="max-w-[86ch]"
           />
           <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {CAPABILITIES.map((c, i) => {
@@ -165,6 +166,14 @@ export default function Capabilities() {
                         </li>
                       ))}
                     </ul>
+                    {"fine" in c && c.fine ? (
+                      <p className="mt-6 text-[12px] leading-[1.5] text-muted-foreground">{c.fine}</p>
+                    ) : null}
+                    {"cta" in c && c.cta ? (
+                      <ArrowLink to={c.cta.to} className="mt-5">
+                        {c.cta.label}
+                      </ArrowLink>
+                    ) : null}
                   </div>
                 </Reveal>
               </div>

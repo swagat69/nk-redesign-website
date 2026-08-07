@@ -14,8 +14,10 @@ export function FeatureCard({
   color,
   icon: Icon,
   eyebrow,
+  badge,
   title,
   body,
+  credit,
   photo,
   photoAlt,
   className,
@@ -24,8 +26,10 @@ export function FeatureCard({
   color: ClayColor;
   icon?: LucideIcon;
   eyebrow?: string;
+  badge?: string;
   title: string;
   body?: string;
+  credit?: string;
   photo?: string;
   photoAlt?: string;
   className?: string;
@@ -50,6 +54,16 @@ export function FeatureCard({
             <Icon className="size-5" strokeWidth={1.9} />
           </span>
         )}
+        {badge && (
+          <span
+            className={cn(
+              "rounded-full px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] whitespace-nowrap",
+              chip,
+            )}
+          >
+            {badge}
+          </span>
+        )}
       </div>
 
       <div>
@@ -59,7 +73,14 @@ export function FeatureCard({
         {body && (
           <p className={cn("mt-3 text-[15px] leading-[1.55]", subtle)}>{body}</p>
         )}
+        {credit && (
+          <p className={cn("mt-3 text-[12px] leading-[1.5]", dark ? "text-white/60" : "text-ink/55")}>
+            {credit}
+          </p>
+        )}
       </div>
+
+      {children}
 
       {photo && (
         <div className="mt-auto overflow-hidden rounded-2xl bg-black/10">
@@ -74,8 +95,6 @@ export function FeatureCard({
           </div>
         </div>
       )}
-
-      {children}
     </div>
   );
 }
