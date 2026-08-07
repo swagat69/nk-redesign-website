@@ -20,6 +20,7 @@ import {
 } from "../components/site/primitives";
 import { Reveal, RevealGroup } from "../components/site/anim";
 import { PageHero } from "../components/site/PageHero";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { img, PHOTO } from "../lib/images";
 
 /* ------------------------------------------------------------------ */
@@ -71,6 +72,13 @@ const FULFILLMENT_POINTS = [
   "Release partial quantities on request or schedule",
   "Ship to selected U.S. destinations",
   "Coordinate outbound parcel or freight service",
+];
+
+const ICON_ACCENTS = [
+  { background: "var(--clay-lavender)", color: "var(--ink)" },
+  { background: "var(--clay-peach)", color: "var(--ink)" },
+  { background: "var(--clay-ochre)", color: "var(--ink)" },
+  { background: "var(--clay-teal)", color: "#ffffff" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -132,7 +140,7 @@ export default function LogisticsFulfillment() {
                     className={`flex h-full flex-col rounded-[20px] p-6 ${
                       last
                         ? "bg-[var(--surface-card)] ring-1 ring-[var(--nk-red-border)]"
-                        : "border border-[var(--hairline)] bg-card"
+                        : `border border-[var(--hairline)] bg-card`
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -149,7 +157,7 @@ export default function LogisticsFulfillment() {
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
-                    <h3 className="mt-5 text-[17px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
+                    <h3 className="mt-5 text-[18px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
                       {step.title}
                     </h3>
                     <p className="mt-2 text-[14px] leading-[1.5] text-body">{step.body}</p>
@@ -178,7 +186,7 @@ export default function LogisticsFulfillment() {
                   <span className="flex size-10 items-center justify-center rounded-lg bg-ink/8 text-ink">
                     <MapPin className="size-5" strokeWidth={2} />
                   </span>
-                  <h3 className="text-[17px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
+                  <h3 className="text-[18px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
                     Direct Delivery
                   </h3>
                 </div>
@@ -192,7 +200,7 @@ export default function LogisticsFulfillment() {
                   <span className="flex size-10 items-center justify-center rounded-lg bg-ink/8 text-ink">
                     <Warehouse className="size-5" strokeWidth={2} />
                   </span>
-                  <h3 className="text-[17px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
+                  <h3 className="text-[18px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
                     Capital Apparel Warehouse
                   </h3>
                 </div>
@@ -217,7 +225,7 @@ export default function LogisticsFulfillment() {
       </section>
 
       {/* ---------------- Section 3: Shipping Options ---------------- */}
-      <section className="py-10 md:py-14">
+      <section className="py-16 md:py-24">
         <Container>
           <SectionHeading
             eyebrow="Shipping Options"
@@ -227,12 +235,6 @@ export default function LogisticsFulfillment() {
           <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SHIPPING_OPTIONS.map((option, i) => {
               const Icon = option.icon;
-              const colors = [
-                { background: "var(--clay-lavender)", color: "var(--ink)" },
-                { background: "var(--clay-peach)", color: "var(--ink)" },
-                { background: "var(--clay-ochre)", color: "var(--ink)" },
-                { background: "var(--clay-teal)", color: "#ffffff" },
-              ];
               return (
                 <div
                   key={option.title}
@@ -240,11 +242,11 @@ export default function LogisticsFulfillment() {
                 >
                   <span
                     className="flex size-10 items-center justify-center rounded-lg"
-                    style={colors[i % colors.length]}
+                    style={ICON_ACCENTS[i % ICON_ACCENTS.length]}
                   >
                     <Icon className="size-5" strokeWidth={2} />
                   </span>
-                  <h3 className="mt-5 text-[17px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
+                  <h3 className="mt-5 text-[18px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
                     {option.title}
                   </h3>
                   <p className="mt-2 text-[14px] leading-[1.5] text-body">{option.body}</p>
@@ -268,7 +270,7 @@ export default function LogisticsFulfillment() {
             <Reveal>
               <div className={`flex h-full flex-col gap-6 rounded-[24px] p-8 ${clayCardClasses.lavender}`}>
                 <span className="flex size-11 items-center justify-center rounded-xl bg-ink/8 text-ink">
-                  <MapPin className="size-5" strokeWidth={1.9} />
+                  <MapPin className="size-5" strokeWidth={2} />
                 </span>
                 <div>
                   <h3 className="text-[22px] leading-[1.25] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
@@ -282,7 +284,7 @@ export default function LogisticsFulfillment() {
                 </div>
                 <div className="mt-auto overflow-hidden rounded-2xl bg-black/10">
                   <div className="aspect-[16/10]">
-                    <img
+                    <ImageWithFallback
                       src={img("/stock/direct-delivery.jpg", 720, 450)}
                       alt="Delivery worker with cartons at a truck loaded for a U.S. destination"
                       loading="lazy"
@@ -298,7 +300,7 @@ export default function LogisticsFulfillment() {
               <div className="flex h-full flex-col rounded-[24px] border border-[var(--hairline)] bg-card p-8 md:p-10">
                 <div className="flex items-center justify-between gap-3">
                   <span className="flex size-11 items-center justify-center rounded-xl bg-ink/8 text-ink">
-                    <PackageCheck className="size-5" strokeWidth={1.9} />
+                    <PackageCheck className="size-5" strokeWidth={2} />
                   </span>
                   <span className="rounded-full bg-ink/8 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink">
                     U.S. Partner Support
@@ -369,6 +371,7 @@ export default function LogisticsFulfillment() {
                 Capital Apparel
                 <br />
                 <a
+                  data-pressable="true"
                   href="mailto:customerservice@capitalapparel.com"
                   className="underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
                 >

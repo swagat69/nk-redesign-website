@@ -24,7 +24,7 @@ import {
   CTAButton,
   SectionHeading,
   ArrowLink,
-  CLAY_CYCLE,
+  CLAY_CYCLE,
 } from "../components/site/primitives";
 import { Reveal, RevealGroup } from "../components/site/anim";
 import { FeatureCard } from "../components/site/FeatureCard";
@@ -113,9 +113,8 @@ function HomeProductStory({ product }: { product: ProductItem }) {
 
   return (
     <Link
-      data-clickable-card="true"
       to="/portfolio#product-range"
-      className="group flex flex-col overflow-hidden rounded-[30px] bg-ink text-white shadow-[0_22px_64px_rgba(45,34,18,0.16)] outline-none ring-1 ring-black/[0.08] transition duration-300 focus-visible:ring-2 focus-visible:ring-[var(--nk-red)]"
+      className="group flex flex-col overflow-hidden rounded-[30px] bg-ink text-white shadow-[0_22px_64px_rgba(45,34,18,0.16)] outline-none ring-1 ring-black/[0.08] transition-[box-shadow,transform] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_28px_72px_rgba(45,34,18,0.22)] focus-visible:ring-2 focus-visible:ring-[var(--nk-red)] motion-reduce:hover:translate-y-0 motion-reduce:transition-none"
       aria-label={`Explore ${copy.label}`}
     >
       <div className="relative m-3 aspect-[16/10] overflow-hidden rounded-[24px] bg-white">
@@ -333,7 +332,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-14 md:py-20" id="featured-products">
+      <section className="py-16 md:py-24" id="featured-products">
         <Container>
           <div className="relative isolate overflow-hidden rounded-[30px] bg-[var(--surface-soft)] p-5 shadow-[0_24px_70px_rgba(68,55,35,0.1)] md:p-8 lg:p-10">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_88%_18%,rgba(164,212,197,0.16),transparent_30%)]" />
@@ -383,7 +382,7 @@ export default function Home() {
               {["Qualifying yarn", "Custom Designs", "Premium finished garments", "Custom Packaging", "Reliable shipping"].map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl bg-background px-5 py-4 text-[15px] font-semibold text-ink transition-colors duration-300 hover:text-[var(--nk-red)]"
+                  className="rounded-2xl bg-background px-5 py-4 text-[15px] font-semibold text-ink"
                 >
                   {item}
                 </div>

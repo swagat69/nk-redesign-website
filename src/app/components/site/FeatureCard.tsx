@@ -51,7 +51,7 @@ export function FeatureCard({
       <div className="flex items-center justify-between gap-3">
         {Icon && (
           <span className={cn("flex size-11 items-center justify-center rounded-xl", chip)}>
-            <Icon className="size-5" strokeWidth={1.9} />
+            <Icon className="size-5" strokeWidth={2} />
           </span>
         )}
         {badge && (

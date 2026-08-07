@@ -43,6 +43,13 @@ export const clayCardClasses: Record<ClayColor, string> = {
   cream: "bg-[var(--surface-card)] text-ink",
 };
 
+/* Hover/focus feedback for cards that are GENUINELY CLICKABLE (the whole card
+   is an <a> or <Link>). Static content cards must not use this: a lift on
+   something that does nothing is a false affordance. The hover background is
+   --surface-card, so a card already painted that colour needs its own variant. */
+export const cardHoverClasses =
+  "transition-[color,background-color,border-color,box-shadow,transform] duration-300 ease-out hover:border-[var(--nk-red-border)] hover:bg-[var(--surface-card)] hover:shadow-[0_18px_54px_rgba(68,55,35,0.10)] hover:-translate-y-1 motion-reduce:hover:translate-y-0 motion-reduce:transition-none outline-none focus-visible:ring-2 focus-visible:ring-[var(--nk-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--canvas,#fffaf0)]";
+
 /* ------------------------------------------------------------------ */
 /* Eyebrow intentionally renders nothing: the latest direction removes
    small section labels across the site. */

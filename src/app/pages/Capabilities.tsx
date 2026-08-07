@@ -16,6 +16,7 @@ import {
   CTAButton,
   ArrowLink,
   CLAY_CYCLE,
+  cardHoverClasses,
   clayCardClasses,
 } from "../components/site/primitives";
 import { Reveal, RevealGroup } from "../components/site/anim";
@@ -28,13 +29,6 @@ import { CAPABILITIES, PROCESS } from "../lib/content";
 const CAPABILITY_ICONS = [Layers, PenTool, Factory, Truck, Warehouse];
 const PROCESS_ICONS = [MessageSquareText, Ruler, Factory, ClipboardList, Package];
 const CAPABILITY_ICON_COLORS = [
-  { background: "var(--clay-lavender)", color: "var(--ink)" },
-  { background: "var(--clay-peach)", color: "var(--ink)" },
-  { background: "var(--clay-ochre)", color: "var(--ink)" },
-  { background: "var(--clay-mint)", color: "var(--ink)" },
-  { background: "var(--clay-teal)", color: "#ffffff" },
-];
-const PROCESS_ICON_COLORS = [
   { background: "var(--clay-lavender)", color: "var(--ink)" },
   { background: "var(--clay-peach)", color: "var(--ink)" },
   { background: "var(--clay-ochre)", color: "var(--ink)" },
@@ -77,10 +71,9 @@ export default function Capabilities() {
               const Icon = CAPABILITY_ICONS[i % CAPABILITY_ICONS.length];
               return (
                 <a
-                  data-clickable-card
                   key={c.id}
                   href={`#${c.id}`}
-                  className="rounded-[20px] border border-[var(--hairline)] bg-card p-6 transition-colors hover:bg-[var(--surface-card)]"
+                  className={`rounded-[20px] border border-[var(--hairline)] bg-card p-6 ${cardHoverClasses}`}
                 >
                   <span
                     className="flex size-11 items-center justify-center rounded-xl"
@@ -99,7 +92,7 @@ export default function Capabilities() {
         </Container>
       </section>
 
-      <section className="py-10 md:py-14">
+      <section className="py-16 md:py-24">
         <Container>
           <RevealGroup className="grid gap-4 md:grid-cols-3">
             {[
@@ -198,11 +191,11 @@ export default function Capabilities() {
                 <div key={p.id} className="flex h-full flex-col rounded-[20px] border border-[var(--hairline)] bg-card p-6">
                   <span
                     className="flex size-10 items-center justify-center rounded-lg"
-                    style={PROCESS_ICON_COLORS[i % PROCESS_ICON_COLORS.length]}
+                    style={CAPABILITY_ICON_COLORS[i % CAPABILITY_ICON_COLORS.length]}
                   >
                     <Icon className="size-5" strokeWidth={2} />
                   </span>
-                  <h3 className="mt-5 text-[17px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
+                  <h3 className="mt-5 text-[18px] tracking-[-0.02em]" style={{ fontWeight: 600 }}>
                     {p.title}
                   </h3>
                   <p className="mt-2 text-[14px] leading-[1.5] text-body">{p.body}</p>

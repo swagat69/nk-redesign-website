@@ -120,7 +120,7 @@ export default function About() {
                   <span className="mx-auto flex size-11 items-center justify-center rounded-xl bg-background text-ink">
                     <Icon className="size-5 text-[var(--nk-red)]" strokeWidth={2} />
                   </span>
-                  <div className="mt-4 text-[1.25rem] leading-none tracking-[-0.03em] text-ink" style={{ fontWeight: 600 }}>
+                  <div className="mt-4 text-[1.35rem] leading-none tracking-[-0.03em] text-ink" style={{ fontWeight: 600 }}>
                     {s.label}
                   </div>
                   <p className="mx-auto mt-2 max-w-[24ch] text-[14px] leading-[1.45] text-body">
@@ -149,7 +149,7 @@ export default function About() {
                     className="flex size-11 items-center justify-center rounded-xl"
                     style={VALUE_ACCENTS[i % VALUE_ACCENTS.length]}
                   >
-                    <Icon className="size-5" strokeWidth={1.9} />
+                    <Icon className="size-5" strokeWidth={2} />
                   </span>
                   <h3 className="mt-5 text-[1.2rem] tracking-[-0.02em] text-ink" style={{ fontWeight: 600 }}>
                     {v.title}
@@ -268,10 +268,10 @@ export default function About() {
               <div key={row.label} className="grid grid-cols-[1fr_auto_auto] items-center gap-4 border-b border-[var(--hairline)] px-6 py-4 last:border-0 md:gap-8 md:px-8">
                 <span className="text-[15px]">{row.label}</span>
                 <span className="flex w-16 justify-center text-[var(--nk-red)]" aria-label={row.nk ? "Yes" : "No"}>
-                  {row.nk ? <Check className="size-5" strokeWidth={2.2} aria-hidden /> : <X className="size-5" strokeWidth={2.2} aria-hidden />}
+                  {row.nk ? <Check className="size-5" strokeWidth={2} aria-hidden /> : <X className="size-5" strokeWidth={2} aria-hidden />}
                 </span>
                 <span className="flex w-16 justify-center text-muted-foreground" aria-label={row.them ? "Yes" : "No"}>
-                  {row.them ? <Check className="size-5" strokeWidth={2.2} aria-hidden /> : <X className="size-5" strokeWidth={2.2} aria-hidden />}
+                  {row.them ? <Check className="size-5" strokeWidth={2} aria-hidden /> : <X className="size-5" strokeWidth={2} aria-hidden />}
                 </span>
               </div>
             ))}

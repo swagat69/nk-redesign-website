@@ -27,55 +27,11 @@ export function RootLayout() {
         },
       );
 
-      gsap.set("[data-clickable-card], [data-pressable]", { transformOrigin: "50% 50%" });
+      gsap.set("[data-pressable]", { transformOrigin: "50% 50%" });
 
       const findTarget = (event: Event, selector: string) => {
         const target = event.target;
         return target instanceof Element ? target.closest<HTMLElement>(selector) : null;
-      };
-
-      const isInside = (node: EventTarget | null, parent: HTMLElement) =>
-        node instanceof Node && parent.contains(node);
-
-      const onEnter = (target: HTMLElement) => {
-        gsap.to(target, {
-          y: -6,
-          scale: 1.01,
-          duration: 0.34,
-          ease: EASE,
-          overwrite: "auto",
-        });
-      };
-
-      const onLeave = (target: HTMLElement) => {
-        gsap.to(target, {
-          y: 0,
-          scale: 1,
-          duration: 0.42,
-          ease: "power2.out",
-          overwrite: "auto",
-        });
-      };
-
-      const onCardPress = (target: HTMLElement) => {
-        gsap.to(target, {
-          y: -2,
-          scale: 0.992,
-          duration: 0.16,
-          ease: "power2.out",
-          overwrite: "auto",
-        });
-      };
-
-      const onCardRelease = (target: HTMLElement) => {
-        const hovering = target.matches(":hover");
-        gsap.to(target, {
-          y: hovering ? -6 : 0,
-          scale: hovering ? 1.01 : 1,
-          duration: 0.24,
-          ease: EASE,
-          overwrite: "auto",
-        });
       };
 
       const onPress = (target: HTMLElement) => {
@@ -96,61 +52,30 @@ export function RootLayout() {
         });
       };
 
-      const onPointerOver = (event: PointerEvent) => {
-        const card = findTarget(event, "[data-clickable-card]");
-        if (!card || isInside(event.relatedTarget, card)) return;
-        onEnter(card);
-      };
-
-      const onPointerOut = (event: PointerEvent) => {
-        const card = findTarget(event, "[data-clickable-card]");
-        if (!card || isInside(event.relatedTarget, card)) return;
-        onLeave(card);
-      };
-
       const onPointerDown = (event: PointerEvent) => {
         const pressable = findTarget(event, "[data-pressable]");
-        if (pressable) {
-          onPress(pressable);
-          return;
-        }
-
-        const card = findTarget(event, "[data-clickable-card]");
-        if (card) onCardPress(card);
+        if (pressable) onPress(pressable);
       };
 
       const onPointerUp = (event: PointerEvent) => {
         const pressable = findTarget(event, "[data-pressable]");
-        if (pressable) {
-          onRelease(pressable);
-          return;
-        }
-
-        const card = findTarget(event, "[data-clickable-card]");
-        if (card) onCardRelease(card);
+        if (pressable) onRelease(pressable);
       };
 
       const onPointerCancel = (event: PointerEvent) => {
         const pressable = findTarget(event, "[data-pressable]");
         if (pressable) onRelease(pressable);
-
-        const card = findTarget(event, "[data-clickable-card]");
-        if (card) onLeave(card);
       };
 
-      document.addEventListener("pointerover", onPointerOver);
-      document.addEventListener("pointerout", onPointerOut);
       document.addEventListener("pointerdown", onPointerDown);
       document.addEventListener("pointerup", onPointerUp);
       document.addEventListener("pointercancel", onPointerCancel);
 
       return () => {
-        document.removeEventListener("pointerover", onPointerOver);
-        document.removeEventListener("pointerout", onPointerOut);
         document.removeEventListener("pointerdown", onPointerDown);
         document.removeEventListener("pointerup", onPointerUp);
         document.removeEventListener("pointercancel", onPointerCancel);
-        gsap.killTweensOf("[data-clickable-card], [data-pressable]");
+        gsap.killTweensOf("[data-pressable]");
       };
     },
     { scope: mainRef, dependencies: [location.pathname], revertOnUpdate: true },

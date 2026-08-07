@@ -132,7 +132,7 @@ function filterPillClasses(active: boolean) {
 
 function ProductSpecSummary({ product }: { product: ProductItem }) {
   return (
-    <dl className="mt-4 overflow-hidden rounded-[20px] border border-[var(--hairline)] bg-background/70 transition-colors duration-300 group-hover:border-[var(--nk-red-border)]">
+    <dl className="mt-4 overflow-hidden rounded-[20px] border border-[var(--hairline)] bg-background/70">
       <div className="grid gap-1.5 px-4 py-3 sm:grid-cols-[6.5rem_1fr] sm:gap-4">
         <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
           Made from
@@ -159,7 +159,7 @@ function ProductLaunchCard({ launch }: { launch: (typeof PRODUCT_LAUNCH)[number]
   return (
     <article
       className={cn(
-        "relative isolate flex h-full flex-col overflow-hidden rounded-[26px] p-3 shadow-[0_20px_54px_rgba(40,32,18,0.1)] md:p-4",
+        "relative isolate flex h-full flex-col overflow-hidden rounded-[30px] p-3 shadow-[0_20px_54px_rgba(40,32,18,0.1)] md:p-4",
         launch.surface,
       )}
     >
@@ -167,7 +167,7 @@ function ProductLaunchCard({ launch }: { launch: (typeof PRODUCT_LAUNCH)[number]
         className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),transparent_42%)]"
       />
 
-      <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-white shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)]">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] bg-white shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)]">
         {heroProduct && (
           <ImageWithFallback
             src={img(heroProduct.photo, 820, 520)}
@@ -209,7 +209,6 @@ function ProductLaunchCard({ launch }: { launch: (typeof PRODUCT_LAUNCH)[number]
         <div className="mt-5 grid gap-2 border-t border-white/14 pt-4">
           {featured.map((product) => (
             <a
-              data-clickable-card="true"
               key={product.id}
               href="#product-range"
               className="group/link flex items-center justify-between gap-3 rounded-xl bg-white/[0.06] px-3 py-2.5 transition-colors hover:bg-white/[0.1]"
@@ -247,7 +246,7 @@ function ProductCard({ product }: { product: ProductItem }) {
   const isPdfVisual = product.photo.startsWith("/product-pdfs/");
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-[30px] border border-[var(--hairline)] bg-[linear-gradient(180deg,var(--card),var(--surface-card))] p-2 transition-[border-color,box-shadow,transform] duration-500 ease-out hover:-translate-y-1 hover:border-[var(--nk-red-border)] hover:shadow-[0_18px_54px_rgba(68,55,35,0.10)]">
+    <article className="relative flex flex-col overflow-hidden rounded-[30px] border border-[var(--hairline)] bg-[linear-gradient(180deg,var(--card),var(--surface-card))] p-2">
       <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-80" />
       <div className="p-2 pb-0">
         <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] bg-white ring-1 ring-black/[0.04]">
@@ -257,7 +256,7 @@ function ProductCard({ product }: { product: ProductItem }) {
             loading="lazy"
             decoding="async"
             className={cn(
-              "size-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.025]",
+              "size-full object-contain",
               isPdfVisual ? "p-2" : "p-3",
             )}
           />
@@ -273,7 +272,7 @@ function ProductCard({ product }: { product: ProductItem }) {
             Customizable
           </span>
         </div>
-        <h3 className="text-[1.28rem] leading-[1.12] tracking-[-0.035em] text-ink transition-colors duration-300 group-hover:text-[var(--nk-red-subtle)]">
+        <h3 className="text-[1.28rem] leading-[1.12] tracking-[-0.035em] text-ink">
           {product.name}
         </h3>
 
@@ -283,10 +282,10 @@ function ProductCard({ product }: { product: ProductItem }) {
           <Link
             data-pressable="true"
             to={`/contact?product=${encodeURIComponent(product.name)}`}
-            className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl border border-[var(--hairline)] bg-background/80 text-[14px] font-semibold text-ink transition-all duration-300 hover:border-[var(--nk-red)] hover:bg-[var(--nk-red)] hover:text-white active:scale-[0.985]"
+            className="group/quote inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl border border-[var(--hairline)] bg-background/80 text-[14px] font-semibold text-ink transition-all duration-300 hover:border-[var(--nk-red)] hover:bg-[var(--nk-red)] hover:text-white active:scale-[0.985]"
           >
             Quote this product
-            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ArrowRight className="size-4 transition-transform duration-300 group-hover/quote:translate-x-0.5" />
           </Link>
         </div>
       </div>
@@ -333,7 +332,7 @@ export default function Portfolio() {
         }
       />
 
-      <section id="product-launch" className="scroll-mt-24 py-14 md:py-20">
+      <section id="product-launch" className="scroll-mt-24 py-16 md:py-24">
         <Container>
           <div className="mb-8">
             <SectionHeading
@@ -451,7 +450,7 @@ export default function Portfolio() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {CASE_STUDIES.map((c, i) => (
               <Reveal key={c.client} delay={i * 0.05}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-[var(--hairline)] bg-card transition-colors duration-300 hover:border-[var(--nk-red-border)]">
+                <article className="flex h-full flex-col overflow-hidden rounded-[24px] border border-[var(--hairline)] bg-card">
                   <div className="p-3">
                     <div className="aspect-[4/3] overflow-hidden rounded-[18px] bg-[var(--surface-card)]">
                       <ImageWithFallback
@@ -459,7 +458,7 @@ export default function Portfolio() {
                         alt={c.client}
                         loading="lazy"
                         decoding="async"
-                        className="size-full object-cover transition-transform duration-300"
+                        className="size-full object-cover"
                       />
                     </div>
                   </div>

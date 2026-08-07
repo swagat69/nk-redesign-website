@@ -167,7 +167,6 @@ export function ClientShowcase() {
                   // remount would skip the CSS transition and pop in place.
                   return (
                     <Link
-                      data-clickable-card={isCenter ? "true" : undefined}
                       key={item.id}
                       to="/portfolio#product-range"
                       tabIndex={isCenter ? 0 : -1}

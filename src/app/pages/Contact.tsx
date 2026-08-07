@@ -13,7 +13,7 @@ import {
 import {
   Container,
   SectionHeading,
-  CTAButton,
+  CTAButton,
 } from "../components/site/primitives";
 import { cn } from "../components/ui/utils";
 
@@ -197,7 +197,6 @@ export default function Contact() {
                 <div className="mt-5">
                   <label className={labelCls}>Attach tech pack or reference</label>
                   <label
-                    data-clickable-card="true"
                     htmlFor="file"
                     className="group flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-[var(--hairline)] bg-background px-4 py-4 text-[14px] text-muted-foreground transition-colors hover:border-[var(--nk-red-border)] hover:text-[var(--nk-red-subtle)]"
                   >
@@ -227,7 +226,7 @@ export default function Contact() {
                       <Phone className="size-5 shrink-0" />
                     </span>
                     <div>
-                      <a href="tel:+12023414493" className="block leading-6 hover:underline">+1 (202) 341-4493</a>
+                      <a data-pressable="true" href="tel:+12023414493" className="block leading-6 hover:underline">+1 (202) 341-4493</a>
                       <p className="mt-0.5 text-[13px] text-white/65">Weekday business hours ET</p>
                     </div>
                   </li>
@@ -235,7 +234,7 @@ export default function Contact() {
                     <span className="flex h-6 w-8 items-center justify-start text-[var(--clay-mint)]">
                       <Mail className="size-5 shrink-0" />
                     </span>
-                    <a href="mailto:sales@nkinternationalusa.com" className="block min-w-0 truncate leading-6 hover:underline">sales@nkinternationalusa.com</a>
+                    <a data-pressable="true" href="mailto:sales@nkinternationalusa.com" className="block min-w-0 truncate leading-6 hover:underline">sales@nkinternationalusa.com</a>
                   </li>
                   <li className="grid grid-cols-[32px_minmax(0,1fr)] items-start gap-4">
                     <span className="flex h-6 w-8 items-center justify-start text-[var(--clay-mint)]">
@@ -264,7 +263,7 @@ export default function Contact() {
                   <p className="mt-1.5 text-[14px] text-muted-foreground">{c.role}</p>
                   <div className="mt-5 grid gap-2 text-[14px] text-muted-foreground">
                     {c.phones.map((p) => (
-                      <a key={p.tel} href={`tel:${p.tel}`} className="grid grid-cols-[74px_minmax(0,1fr)] items-center gap-3 transition-colors hover:text-[var(--nk-red)]">
+                      <a data-pressable="true" key={p.tel} href={`tel:${p.tel}`} className="grid grid-cols-[74px_minmax(0,1fr)] items-center gap-3 transition-colors hover:text-[var(--nk-red)]">
                         <span className="inline-flex items-center gap-2">
                           <Phone className="size-4 shrink-0 text-[var(--nk-red)]" />
                           <span className="text-[11px] font-semibold uppercase tracking-[0.08em]">{p.region === "USA" ? "USA" : "PAK"}</span>
@@ -272,7 +271,7 @@ export default function Contact() {
                         <span className="min-w-0 leading-[1.45] text-ink">{p.number}</span>
                       </a>
                     ))}
-                    <a href={`mailto:${c.email}`} className="grid grid-cols-[74px_minmax(0,1fr)] items-center gap-3 transition-colors hover:text-[var(--nk-red)]">
+                    <a data-pressable="true" href={`mailto:${c.email}`} className="grid grid-cols-[74px_minmax(0,1fr)] items-center gap-3 transition-colors hover:text-[var(--nk-red)]">
                       <span className="inline-flex items-center gap-2">
                         <Mail className="size-4 shrink-0 text-[var(--nk-red)]" />
                         <span className="text-[11px] font-semibold uppercase tracking-[0.08em]">Email</span>

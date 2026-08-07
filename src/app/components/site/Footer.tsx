@@ -122,6 +122,7 @@ export function Footer() {
                 {col.links.map((link, i) => (
                   <li key={`${col.title}-${i}`}>
                     <Link
+                      data-pressable="true"
                       to={link.to}
                       className="inline-flex min-h-8 items-center text-[15px] text-body transition-colors hover:text-[var(--nk-red)]"
                     >
@@ -149,12 +150,12 @@ export function Footer() {
                       <span className="font-normal text-muted-foreground"> {"/"} {c.role}</span>
                     </div>
                     <div className="mt-1.5 grid gap-1 text-[14px]">
-                      <a href={`mailto:${c.email}`} className="grid grid-cols-[34px_minmax(0,1fr)] items-baseline gap-2 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
+                      <a data-pressable="true" href={`mailto:${c.email}`} className="grid grid-cols-[34px_minmax(0,1fr)] items-baseline gap-2 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
                         <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">Email</span>
                         <span className="min-w-0 truncate text-[13px]">{c.email}</span>
                       </a>
                       {c.phones.map((p) => (
-                        <a key={p.tel} href={`tel:${p.tel}`} className="grid grid-cols-[34px_minmax(0,1fr)] items-baseline gap-2 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
+                        <a data-pressable="true" key={p.tel} href={`tel:${p.tel}`} className="grid grid-cols-[34px_minmax(0,1fr)] items-baseline gap-2 leading-[1.45] transition-colors hover:text-[var(--nk-red)]">
                           <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">{p.region}</span>
                           <span className="whitespace-nowrap">{p.number}</span>
                         </a>
